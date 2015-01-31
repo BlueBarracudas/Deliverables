@@ -1,0 +1,25 @@
+In the problem analysis part, I think we could add this... 
+Description : when companies  need an able
+employee and there's none in the list of applicants or there's really
+no one applying.
+Causes : There's no central container/repository where all possible employees
+details are kept exist.
+Symptoms : Some companies will need to conduct immediate hiring
+Impact : Having no one to fill a position in a company can hamper the whole
+business process and at the same time, conducting immediate hiring may 
+not be able to filter properly the lists of applicants.
+
+
+SRS Characteristics based from http://techwhirl.com/writing-software-requirements-specifications/
+
+Clarity : Refer to issues mentioned above
+Complete :  Not Yet!
+Consistent :
+Accurate :
+Modifiable : Yes!
+Ranked : 
+Testable :  Yes!
+Traceable : 
+Unambiguous : Confirm!
+Valid : Confirm!
+Verifiable :  Not Sure!
