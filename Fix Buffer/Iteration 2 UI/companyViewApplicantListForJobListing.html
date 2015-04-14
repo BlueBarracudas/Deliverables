@@ -9,18 +9,25 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.css">
 <link rel="stylesheet" href="css/bootstrap.theme.min.css">
-    <link rel="stylesheet" href="css/companyViewListings.css">
-<link rel="stylesheet" href="css/admin_companyRegistration.css">
+<!-- <link rel="stylesheet" href="css/admin_companyRegistration.css"> -->
+
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/panels.css">
+<link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/companyViewListofApplicantForJobListing.css">
+
 <script src="js/jquery-2.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
-    <script src="js/companyViewListings.js"></script>
-    ]
+    
+<script src="js/companyviewApplicantListforJobPosting.js"></script>
+
 </head>
 <body onload="add_job_item()">
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>List of Jobs</h4>
+                <h4>//Job Listing: Position here - List of Applicants</h4>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -32,19 +39,19 @@
                                         <label><input type="checkbox"></label>
                                     </div>
                                     <div class="col-md-3">
-                                        <p class="job-position">{{job.Position}}</p>
+                                        <p class="applicant-name">{{applicant.name}}</p>
                                     </div>
                                     <div class="col-md-3">
                                         <ul>
-                                            <li>{{job.details}}</li>
-                                            <li>{{job.details}}</li>
+                                            <li>{{applicant.details}}</li>
+                                            <li>{{applicant.details}}</li>
                                         </ul>
                                         <button type="button" class="btn-link see-more-btn" onclick="details_enter()">See More</button>
                                     </div>
-                                    <div class="col-md-3 col-md-offset-2">
+                                    <div class="col-md-4 col-md-offset-1">
                                         <div class="btn-group">
-                                            <button type="button" class="btn" onclick="edit_enter()">Edit</button>
-                                            <button type="button" class="btn delete-btn" id="delete1" onclick='delete_job_item(this)'>Delete</button>
+                                            <button type="button" class="btn" onclick="edit_enter()">Set Appointment</button>
+                                            <button type="button" class="btn delete-btn" id="delete1" onclick='delete_job_item(this)'>Reject Applicant</button>
                                         </div> 
                                     </div>
                                 </div>
@@ -53,8 +60,8 @@
                     </div>
                     <div class="col-md-2">
                         <div class="btn-group-vertical" id="approval-btn-group">
-                            <button type="button" class="btn" onclick="delete_all()">Delete All</button>
-                            <button type="button" class="btn" onclick="delete_selected()">Delete Selected</button>
+                            <button type="button" class="btn" onclick="delete_all()">Reject All</button>
+                            <button type="button" class="btn" onclick="delete_selected()">Reject Selected</button>
                         </div>
                     </div>
                 </div>
@@ -66,7 +73,7 @@
         <div class="container popup">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Job Details</h4>
+                    <h4>Applicant Details</h4>
                 </div>
                 <div class="col-md-6">
                     <button class="btn btn-xs" id="close-btn" onclick = "details_exit()">
@@ -75,23 +82,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2">Job Position:</div>
-                <div class="col-md-10"><span id="popup-job-details">{{job.Position}}</span></div>
+                <div class="col-md-2">Full Name:</div>
+       
             </div>
             <div class="row">
                 <div class="col-md-2">Job Details:</div>
-                <div class="col-md-6">
-                    <ul class="list-group" id="popup-job-details">
-                        <li class="list-group-item">{{job.Detail}}</li>
-                        <li class="list-group-item">{{job.Detail}}</li>
-                    </ul>
-                </div>
             </div>
             <div class="row">
                 <div class="col-md-offset-2 col-md-6">
                     <div class="btn-group">
-                        <button class="btn">Edit</button>
-                        <button class="btn">Delete</button>
+                        <button class="btn">Set Appointment</button>
+                        <button class="btn">Reject Apllicant</button>
                     </div>
                 </div>
             </div>
@@ -102,7 +103,7 @@
         <div class="container popup">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Edit Job Details</h4>
+                    <h4>Set Appointment</h4>
                 </div>
                 <div class="col-md-6">
                     <button class="btn btn-xs" id="close-btn" onclick = "edit_exit()">
@@ -112,19 +113,28 @@
             </div>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="job-postion">Job Position:</label>
+                    <label class="control-label col-md-2" for="job-date">Date:</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="job-postion">
+                        <input type="date" class="form-control" id="job-date1">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="job-details">Job Details:</label>
+                    <label class="control-label col-md-2" for="job-time">Time:</label>
                     <div class="col-md-4" id="popup-job-detail-form">
-                        <input type="text" class="form-control" id="job-details1">
+                        <input type="time" class="form-control" id="job-time1">
                         <span class="error-msg">Error Message</span>
-                        <button type="button" class="btn-link" id="add_another_detail_btn" 
-                         onclick="popup_add_detail_form()">+add another Detail</button>
                     </div>
+                    </div>
+                    
+                      <div class="form-group">
+                    <label class="control-label col-md-2" for="job-details">Message:</label>
+                    <div class="col-md-4" id="popup-job-detail-form">
+                        <textarea class="form-control" id="job-message1"></textarea>
+                        <span class="error-msg">Error Message</span>
+                      
+                    </div>
+                    
+                    
                 </div>
                 <div class="form-group">
                     <div class="col-md-4 col-md-offset-2 btn-group">

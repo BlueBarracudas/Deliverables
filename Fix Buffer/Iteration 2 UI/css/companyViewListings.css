@@ -1,8 +1,8 @@
-/*    .btn {
+  .btn {
             background-image: none;
             background-color: #ff5200;
             color: white;
-        }*/
+        }
     
         .panel-default {
             border: 1px solid black;
@@ -94,20 +94,3 @@
             top: 1%;
             right: 1%
         }
-
-.list-applicant{
-    border: 2px solid black;
-    margin: 3px 0px;
-    height: 30%;
-    padding: 15px;
-}
-
-#listOfApplicantsPanelTitle{
-    background-color: rgb(255,82,0);
-    background-image: none;
-}
-
-#listOfApplicantsHeader{
-    color: white;
-}
-
