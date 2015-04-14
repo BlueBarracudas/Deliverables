@@ -1,3 +1,8 @@
+var numOfSkills = 1;
+var numOfJobTitles = 1;
+var numOfCertifications = 1;    
+
+
 $( "#skilladd" ).click(function(){
         var br = document.createElement('br');
      var br2 = document.getElementById("skilllist");
