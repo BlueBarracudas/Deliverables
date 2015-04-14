@@ -1,8 +1,8 @@
-/*.container{
-	background-color: blue;
+.container{
+	/*background-color: blue;*/
 	margin: 0 auto;
 }
-*/
+
 
 #row1{
 	border-radius: 0px !important;

@@ -1,8 +1,12 @@
-/*.container{
-	background-color: blue;
+.container{
+	/*background-color: blue;*/
 	margin: 0 auto;
 }
-*/
+
+#loginPanel{
+	/*background-color: red;*/
+	/*width: 490px;*/
+}
 
 #row1{
 	border-radius: 0px !important;
@@ -14,19 +18,11 @@
 
 /*.panel-heading {background-color: red!important}*/
 
-#InnerContainer{
-
-margin: 0 auto;
-text-align:center;
+#loginInnerContainer{
+/*background-color: red;*/
+/*margin: 0 auto;*/
 }
 
-
-
-.center{
-
-text-align:center;
-
-}
 
 
 .panel-default>.panel-heading{
@@ -37,17 +33,14 @@ text-align:center;
 
 .panel-default>.panel-heading>.panel-title{
 	color:white;
-	text-align: left;
-
 }
 
 .panel-default{
 	border-color: grey !important;
-       width: 100%;
+}
 
-
-
- 
+#forgotPassword, #dontHaveAnAccountYet{
+	vertical-align: middle !important;
 }
 
 #pop{
@@ -55,4 +48,15 @@ text-align:center;
 
 }
 
+.loginElements{
+	text-align: center;
+}
 
+#loginBtnRow button{
+	width: 150px;
+}
+
+.panel-body{
+	padding: 20px !important;
+
+}

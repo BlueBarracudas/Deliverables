@@ -5,8 +5,9 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    '</div>' +
 		    '<div>' +
 		      '<ul class="nav nav-tabs navbar-nav">'+
-		        '<li id="home" class="active"><a href="#" class="navigation">Home</a></li>'+  '<li id="RegisterCompany"><a href="#companyregister" data-toggle="tab">Register Company</a></li>'+
-               	'<li id="RegisterAdmin"><a href="#adminregister" data-toggle="tab">Register Admin</a></li>'+
+		        '<li id="home"><a href="" class="navigation">Home</a></li>'+  
+		        '<li id="RegisterCompany"><a href=" data-toggle="tab">Register Company</a></li>'+
+               	'<li id="RegisterAdmin"><a href="" data-toggle="tab">Register Admin</a></li>'+
 		      '</ul>' +
 		      '<ul class="nav navbar-nav navbar-right">' +
 		      	'<li class="dropdown">'+

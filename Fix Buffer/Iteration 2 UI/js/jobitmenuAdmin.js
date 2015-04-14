@@ -5,7 +5,7 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom"> '+
 		    '</div>'+
 		   ' <div>'+
 		      '<ul class="nav nav-tabs navbar-nav">'+
-				'<li id="home" class="active"><a href="#" class="navigation">Home</a></li>'+
+				'<li id="home"><a href="#" class="navigation">Home</a></li>'+
 				'<li id="RegisterCompany"><a href="#adminregister" data-toggle="tab">Register Company</a></li>'+
 			   '</ul>'+
 		  '    <ul class="nav navbar-nav navbar-right">'+
