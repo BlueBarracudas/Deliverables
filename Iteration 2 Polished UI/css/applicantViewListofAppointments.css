@@ -1,0 +1,112 @@
+
+        .btn {
+            background-color: #ff5200;
+            color: white;
+        }
+    
+        .panel-default {
+            border: 1px solid black;
+        }
+    
+        .panel-heading {
+            background-image: none !important;
+            background-color: #ff5200 !important;
+            color: white !important;
+        }
+        
+        #approval-btn-group {
+
+            min-height: 100px;
+            max-height: 200px;
+            border-radius: 0px;
+            padding: 30px 5px;
+        }
+    
+        #appointment-list {
+            height: 600px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    
+        .checkbox {
+            padding-top: 30px;
+        }
+    
+        .appointment-item {
+            border: 1px solid black;
+        }
+    
+        .list-img {
+            width: 100px;
+            height: 100px;
+        }
+    
+        .details-img {
+            width: 200px;
+            height: 200px;
+        }
+    
+        .error-msg {
+            color: red;
+            visibility: hidden;
+        }
+    
+        #details-msg {
+            resize: none;
+        }
+    
+        .appointment-details {
+            padding-top: 40px;
+            font-size: 10px;
+            color: darkgrey;
+        }
+    
+        .appointment-btns {
+            padding-top: 35px;
+            padding-left: 40px;
+        }
+    
+        .empty-span {
+            color: red;
+            position: relative;
+            left: 40%;
+        }
+    
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+        }
+    
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            width: 60%;
+            height: 50%;
+            padding: 16px;
+            border: 3px solid black;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+    
+        .popup-container {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .close-btn {
+            position: absolute;
+            top: 1%;
+            right: 1%
+        }
