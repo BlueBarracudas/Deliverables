@@ -1,50 +1,42 @@
-
-    var numOfAppointments = 1;
-    function details_enter(){
-        document.getElementById('details-popup').style.display='block';
-        document.getElementById('fade').style.display='block';
-    }
-    function details_exit(){
-        document.getElementById('details-popup').style.display='none';
-        document.getElementById('fade').style.display='none';
-    }
-    function reschedule_enter() {
-        document.getElementById('reschedule-popup').style.display='block';
-        document.getElementById('fade').style.display='block';
-    }
-    function reschedule_exit() {
-        document.getElementById('reschedule-popup').style.display='none';
-        document.getElementById('fade').style.display='none';
+var numOfAppointments = 1;
+    
+    $('#reschedule-popup').on('shown.bs.modal', function() {
+        $('#reschedule-form').formValidation('resetForm', true);
+    });
+    
+    //replaces the accept button with a reschedule button
+    function accept_action(el) {
+        $(el).replaceWith('<button type="button" class="btn btn-success" data-toggle="modal" data-target="#reschedule-popup">Reschedule</button>')
     }
     
+    //Modify if necessary
     function add_new_list_item() {
         numOfAppointments++;
-        var $newitem = $('<li class="list-group-item appointment-item" id="appoinment' + numOfAppointments + '"></li>');
+        var $newitem = $('<li class="list-group-item appointment-item" id="appointment' + numOfAppointments + '"></li>');
         var $newdiv = $('<div class="row"></div>');
+        //checkbox
         var $newcol1 = $('<div class="col-md-1 checkbox"></div>');
-        var $newcheckbox = $('<label><input type="checkbox" value="selected"></label>');
-        $newcol1.append($newcheckbox);
+        $newcol1.append($('<label><input type="checkbox"></label>'));
+        //company
         var $newcol2 = $('<div class="col-md-2  appointment-details"></div>');
-        var $newimg = $(' <p class="company-name">{{company.applyingFor}}</p>');
-        $newcol2.append($newimg);
+        $newcol2.append($('<label>Company:</label>'));
+        $newcol2.append($('<p class="company-name">{{company.applyingFor}}</p>'));
+        //position
         var $newcol3 = $('<div class="col-md-2 appointment-details"></div>');
-        var $newname = $('<p class="postion-name">{{postion.name}}</p>');
-        $newcol3.append($newname);
+        $newcol3.append($('<label>Postion:</label>'))
+        $newcol3.append($('<p class="position-name">{{postion.name}}</p>'));
+        //date and time
         var $newcol4 = $('<div class="col-md-2 appointment-details"></div>');
-        var $newtime = $('<p class="appointment-time">{{appointment.Time}}</p>');
-        $newcol4.append($newtime);
-        var $newcol5 = $('<div class="col-md-2 appointment-details"></div>');
-        var $newmsg = $('<p class="appointment-message">{{appointment.Message}}</p>');
-        var $newseebtn = $('<button class="btn-link" onclick="details_enter()">See More</button>');
-        $newcol5.append($newmsg);
-        $newcol5.append($newseebtn);
-        var $newcol6 = $('<div class="col-md-3"></div>');
-        var $newbtngroup = $('<div class="btn-group appointment-btns"></div>');
-        var $newreschedbtn = $('<button type="button" class="btn btn-xs" onclick="reschedule_enter()">Reschedule</button>');
-        var $newcancelbtn = $('<button type="button" class="btn btn-xs" onclick="delete_list_item(this)">Cancel</button>');
-        $newbtngroup.append($newreschedbtn);
-        $newbtngroup.append($newcancelbtn);
-        $newcol6.append($newbtngroup);
+        $newcol4.append($('<label>Appointment Date and Time:</label>'))
+        $newcol4.append($('<p class="appointment-time">{{appointment.date}}</p>'));
+        //see more
+        var $newcol5 = $('<div class="col-md-2 appointment-details btn-row"></div>');
+        $newcol5.append($('<button class="btn btn-link see-more-btn" data-toggle="modal" data-target="#details-popup">See More</button>'));
+        //accept and cancel buttons
+        var $newcol6 = $('<div class="col-md-2 appointment-btns btn-row"></div>');
+        $newcol6.append($('<button type="button" class="btn btn-success" onclick="accept_action(this)">Accept</button>'));
+        $newcol6.append($('<br>'));
+        $newcol6.append($('<button type="button" class="btn btn-default" onclick="delete_list_item(this)">Cancel</button>'));
         $newdiv.append($newcol1);
         $newdiv.append($newcol2);
         $newdiv.append($newcol3);
@@ -63,9 +55,11 @@
     }
     
     function delete_selected() {
+        console.log(numOfAppointments);
         if(numOfAppointments > 0) {
             var temp = numOfAppointments;
-            for(i = 0; i < temp; i++) {
+            for(i = 1; i <= temp; i++) {
+                console.log($('#appointment' + i + ' input'));
                 if($('#appointment' + i + ' input').is(':checked')) {
                     $('#appointment' + i).remove();
                     numOfAppointments--;
@@ -95,7 +89,10 @@
     
     function check_list() {
         if(numOfAppointments == 0) {
-            $('#appointment-list-group').append($('<span class="empty-span">No Appointments</span>"'));
+            if($('#appointment-list-group').children().length == 0) {
+                $('#appointment-list-group').append($('<span class="empty-span">No Appointments</span>"'));
+            }
+            
         }
         else {
             $('.empty-span').remove();

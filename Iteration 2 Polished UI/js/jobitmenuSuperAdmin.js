@@ -36,15 +36,15 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    '</div>' +
 		    
 	  	'</div>' +
-	'</nav>';
-	// <div class="tab-content">
-	// 	<div class= "content tab-pane" id="companyregister">
-	// 		<object type="text/html" data="adminRegisterCompany.html" ></object>
-	// 	</div>
-	// 	<div class= "content tab-pane" id="adminregister">
-	// 		<object type="text/html" data="adminRegistration.html" ></object>
-	// 	</div>
-	// </div>';
+	'</nav>'+
+		 '<div class="tab-content">'+
+	 	'<div class= "content tab-pane" id="companyregister">'+
+	 '<object type="text/html" data="adminRegisterCompany.html" ></object>'+
+	 	'</div>'+
+	 	'<div class= "content tab-pane" id="superAdminRegisterAdmin">'+
+	 		'<object type="text/html" data="adminRegistration.html" ></object>'+
+	 	'</div>'+
+	 '</div>';
 			          
 		       
 

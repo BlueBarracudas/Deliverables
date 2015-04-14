@@ -9,18 +9,16 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.css">
 <link rel="stylesheet" href="css/bootstrap.theme.min.css">
-<link rel="stylesheet" href="css/admin_companyRegistration.css">
-    <link rel="stylesheet" href="css/applicantViewListofAppointments.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/applicantViewListofAppointments.css">    
 <script src="js/jquery-2.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
-    <script src="js/applicantViewListofAppointments.js"></script>
-
 </head>
 <body onload="add_new_list_item()">
     <div class="container">
-        <div class="panel panel-default">
+       <div class="panel panel-default">
             <div class="panel-heading">
-                <h4 class="banner">List of Appointments</h4>
+                <h3 class="banner">List of Appointments</h4>
             </div>
             <div class="panel-body">
                  <div class="row">
@@ -32,63 +30,67 @@
                                     <label><input type="checkbox"></label>
                                 </div>
                                 <div class="col-md-2  appointment-details">
-                                      <p class="company-name">{{company.applyingFor}}</p>
+                                    <label>Company:</label>  
+                                    <p class="company-name">{{company.applyingFor}}</p>
                                 </div>
                                 <div class="col-md-2 appointment-details">
+                                    <label>Postion:</label>
                                     <p class="position-name">{{postion.name}}</p>
                                 </div>
                                 <div class="col-md-2 appointment-details">
+                                    <label>Appointment Date and Time:</label>
                                     <p class="appointment-time">{{appointment.date}}</p>
                                 </div>
-                                <div class="col-md-2 appointment-details">
-                                    <p class="appointment-message">{{appointment.Message}}</p>
-                                    <button class="btn-link" onclick="details_enter()">See More</button>
+                                <div class="col-md-2 appointment-details btn-row">
+                                    <button class="btn btn-link see-more-btn" data-toggle="modal" data-target="#details-popup">See More</button>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="btn-group appointment-btns">
-                                        <button type="button" class="btn btn-xs" onclick="reschedule_enter()">Reschedule</button>
-                                        <button type="button" class="btn btn-xs" onclick="delete_list_item(this)">Cancel</button>
-                                    </div> 
+                                <div class="col-md-2 appointment-btns btn-row">
+                                        <button type="button" class="btn btn-success" onclick="accept_action(this)">Accept</button><br>
+                                        <button type="button" class="btn btn-default" onclick="delete_list_item(this)">Cancel</button>
                                 </div>
                             </div>
-                        </li>
+                       </li>
                     </ul>
                 </div>
-                <div class="col-md-2">
-                    <div class="btn-group-vertical" id="approval-btn-group">
-                        <button type="button" class="btn" onclick="delete_all()">Cancel All</button>
-                        <button type="button" class="btn" onclick="delete_selected()">Cancel Selected</button>
-                    </div>
+                <div class="col-md-2" id="approval-btn-group">
+                        <button type="button" class="btn btn-default" onclick="delete_all()">Cancel All</button>
+                        <button type="button" class="btn btn-default" onclick="delete_selected()">Cancel Selected</button>
                 </div>
             </div>
-            </div>
+           </div>
         </div>
     </div>
     
     <!--Appointment Details Pop-up-->
-    <div id="details-popup" class="white_content">
-        <div class="container popup-container" id="details-container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Appointment Details</h4>
+    <div id="details-popup" class="modal fade" role="dialog">
+        <div class="modal-dialog" id="details-container">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title" id="details-popup-header">Appointment Details</h4>
                 </div>
-                <div class="col-md-6">
-                    <button class="btn btn-xs close-btn" onclick="details_exit()">
-                        <span class="glyphicon glyphicon-remove-circle"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-6">
+                <!--Body-->
+                <div class="model-body">
+                    <!--Company Name-->
                     <div class="row">
                         <div class="col-md-2">
-                            <label>Name:</label>
+                            <label>Company:</label>
                         </div>
                         <div class="col-md-10">
-                            <p>{{applicant.Name}}</p>
+                            <p>{{company.Name}}</p>
                         </div>
                     </div>
+                    <!--Position-->
+                     <div class="row">
+                        <div class="col-md-2">
+                            <label>Position:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <p>{{company.Position}}</p>
+                        </div>
+                    </div>
+                    <!--Date-->
                     <div class="row">
                         <div class="col-md-2">
                             <label>Date:</label>
@@ -97,8 +99,8 @@
                             <p>{{appointment.Date}}</p>
                         </div>
                     </div>
-                    
-                             <div class="row">
+                    <!--Time-->
+                    <div class="row">
                         <div class="col-md-2">
                             <label>Time:</label>
                         </div>
@@ -106,85 +108,82 @@
                             <p>{{appointment.times}}</p>
                         </div>
                     </div>
+                    <!--Message-->
                     <div class="row">
                         <div class="col-md-2">
                             <label for="detail-msg">Message:</label>
                         </div>
-                        <div class="col-md-10">
-                            <textarea class="form-control" disabled cols="5" id="resched-msg">{{Reschedule.Msg}}</textarea>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-8 btn-group">
-                            <button type="button" class="btn">Reschedule</button>
-                            <button type="button" class="btn">Cancel</button>
+                        <div class="col-md-8">
+                            <textarea class="form-control" disabled cols="20" id="resched-msg">{{Reschedule.Msg}}</textarea>
                         </div>
                     </div>
                 </div>
-            </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-md-12 btn-row">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
     </div>
     
     <!--Reschedule Pop-up-->
-    <div id="reschedule-popup" class="white_content">
-        <div class="container popup-container" id="reschedule-container">
-            <!--Reschedule Pop-up Header with Exit button-->
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Reschedule</h4>
+    <div id="reschedule-popup" class="modal fade">
+        <div class="modal-dialog" id="reschedule-container">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title" id="details-popup-header">Reschedule</h4>
                 </div>
-                <div class="col-md-6">
-                    <button class="btn btn-xs close-btn" onclick = "reschedule_exit()">
-                        <span class="glyphicon glyphicon-remove-circle"></span>
-                    </button>
-                </div>
-            </div>
-            <!--Form for rescheduling-->
-            <form class="form-horizontal" role="form">
-                <!--Reschedule Date group-->
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="date">Date:</label>
-                    <div class="col-md-10">
-                        <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
-                        <span class="error-msg">Error Message</span>
+                <!--Body-->
+                <form class="form-horizontal" role="form" id="reschedule-form">
+                    <div class="modal-body">
+                            <!--Reschedule Date group-->
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="date">Date:</label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>
+                            <!--Reschedule Time group-->
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="time">Time:</label>
+                                <div class="col-md-10">
+                                    <input type="time" class="form-control" id="reschedule-date" placeholder="Enter time">
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>            
+                            <!--Reschedule Message Row-->
+                            <div class="form-group">
+                               <label class="control-label col-md-2" for="msg">Message:</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="reschedule-msg" cols="50" placeholder="Enter Message"></textarea>
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>
                     </div>
-                </div>
-                
-                
-                    <!--Reschedule Time group-->
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="time">Time:</label>
-                    <div class="col-md-10">
-                        <input type="time" class="form-control" id="reschedule-time" placeholder="Enter time">
-                        <span class="error-msg">Error Message</span>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="col-md-12 btn-row">
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                                <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
                     </div>
-                </div>            
-                
-                
-                <!--Reschedule Message Row-->
-                <div class="form-group">
-                    <label class="control-label col-md-2" for="msg">Message:</label>
-                    <div class="col-md-10">
-                        <textarea class="form-control" id="reschedule-msg" cols="5" placeholder="Enter Message"></textarea>
-                        <span class="error-msg">Error Message</span>
-                    </div>
-                </div>
-                <!--Reschedule Buttons row-->
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10 btn-group">
-                        <button type="submit" class="btn">Submit</button>
-                        <button type="reset" class="btn" onclick="reschedule_exit()">Cancel</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>  
         </div>
     </div>
-    
-    <!--Dark area for pop-ups-->
-    <div id="fade" class="black_overlay"></div>
 </body>
-
+<script src="js/applicantViewListofAppointments.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </html>
