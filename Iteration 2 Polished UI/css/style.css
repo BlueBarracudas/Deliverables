@@ -44,3 +44,14 @@
 	margin-top: 22px;
 	margin-bottom: 22px;
 }
+
+ .output-label{
+ 	font-weight: normal;
+ 	overflow: auto;
+ }
+
+ .modal-header{
+  background-color: #ff5200 !important;
+  color: white !important;
+  border-radius: 5px 5px 0px 0px !important;
+}
