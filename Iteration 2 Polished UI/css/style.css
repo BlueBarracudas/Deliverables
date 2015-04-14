@@ -1,0 +1,46 @@
+.competency-checkbox{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.align-right{
+	text-align: right;
+}
+
+.test{
+	background-color: cyan;
+}
+
+
+.pl-zero{
+	padding-left: 0px;
+}
+
+#mainContainer{
+	/*background-color: red;*/
+	padding-top: 80px;
+
+}
+
+.mainContainer{
+	/*background-color: red;*/
+	padding-top: 80px;
+
+}
+
+.button-row{
+	text-align: center;
+}
+
+.search-result-btn{
+	margin-top: 22px;
+	margin-bottom: 22px;
+}
