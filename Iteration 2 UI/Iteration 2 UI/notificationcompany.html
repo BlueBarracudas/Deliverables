@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>Edit Notification Settings</title>
+    <style>
+      .container{
+        height: 50%;
+        width: 25%;
+        border-radius: 5px;
+      }
+      #submit{
+        margin: 0 auto !important;
+        text-align: center;
+        padding-top: 20px;
+      }
+      .panel-heading{
+        background-color: #ff5200 !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" id="mainContainer">
+      <div class="panel panel-default">
+        <div class="panel-heading"> <h3>Notification Settings:</h3></div>
+        <div class="panel-body">
+          <form id="notificationSettings">
+            <h3><small>Recieve notifications through:</small></h3>
+            <div class="input-group">
+              <input type="checkbox" id="Email"> Email</input>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" id="SMS"> SMS</input>
+            </div>
+            <h3><small>When to recieve notifications:</small></h3>
+            <div class="input-group">
+              <input type="checkbox" id="recieveMessage"> New applicant in job posting</input>
+            </div>
+            <div class="input-group">
+            <input type="checkbox" id="recieveAccept"> Applicant response to appointment</input>
+            </div>
+            <div class="input-group text-center" id="submit">
+            <button type="submit" class="btn btn-success btn-lg text-center">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

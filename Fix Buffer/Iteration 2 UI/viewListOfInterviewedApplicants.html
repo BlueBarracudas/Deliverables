@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company - List of Applicants</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/bootstrap.theme.min.css">
+   <link rel="stylesheet" href="css/errormessage.css">
+    <link rel="stylesheet" href="css/button.css">
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewListOfInterviewedApplicants.css">
+  <!-- <link rel="stylesheet" href="css/admin_companyRegistration.css"> -->
+
+  <script src="js/jquery-2.1.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+<!-- 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+
+
+</head>
+
+<body>
+  <div class="container mainContainer">
+      <dir class="row">
+         <div class="container" id="listOfApplicantsContainer">
+            <div class="row" id="listOfApplicantsContainerRow">
+                <div class=" col-md-offset-1 col-md-9">
+                <div class="panel panel-default" id="listOfApplicantsPanel">
+                           <div class="panel-heading" id="listOfApplicantsPanelTitle">
+                                  <h3 class="panel-title" id="listOfApplicantsHeader">Interviewed Applicants</h3> 
+                            </div>
+                      <div class="panel-body">
+                              <div class="row list-applicant" id="applicant1" name="applicant1">
+                                  <div class="col-md-3 list-applicant-info">
+                                     <label class="list-applicant-name-label" id="listApplicantNameLabel1" name="listApplicantNameLabel1">
+                                          Name:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-name" id="listApplicantName1" name="listApplicantName1">
+                                          Juan De La Cruz
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-5 list-applicant-info">
+                                      <label  class="list-applicant-description-label" id="listApplicantDescriptionLabel1" name="listApplicantDescriptionLabel1">
+                                          Description:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-description" id="listApplicantDescription1" name="listApplicantDescription1">
+                                         Course: <span id="listApplicantDescriptionCourse">BS Computer Science</span> <br>
+                                         School: <span id="listApplicantDescriptionSchool">DLSU - Manila </span> <br>
+                                         <span><a data-toggle="modal" data-target="#seeMoreModal">See more</a></span>
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-4"> 
+                                        <button type="button" class="btn btn-default search-result-btn col-md-offset-1 col-md-5 list-applicant-button" id="reject1" name="reject1">Reject</button>
+                                         <button type="button" class="btn search-result-btn btn-success col-md-offset-1 col-md-5 list-applicant-button" id="hire1" name="hire1">Hire</button>
+                                  </div>
+                              </div>
+
+
+                              <div class="row list-applicant" id="applicant1" name="applicant1">
+                                  <div class="col-md-3 list-applicant-info">
+                                     <label class="list-applicant-name-label" id="listApplicantNameLabel1" name="listApplicantNameLabel1">
+                                          Name:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-name" id="listApplicantName1" name="listApplicantName1">
+                                          Juan De La Cruz
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-5 list-applicant-info">
+                                      <label  class="list-applicant-description-label" id="listApplicantDescriptionLabel1" name="listApplicantDescriptionLabel1">
+                                          Description:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-description" id="listApplicantDescription1" name="listApplicantDescription1">
+                                         Course: <span id="listApplicantDescriptionCourse">BS Computer Science</span> <br>
+                                         School: <span id="listApplicantDescriptionSchool">DLSU - Manila </span> <br>
+                                         <span><a href="">See more</a></span>
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-4"> 
+                                        <button type="button" class=" search-result-btn btn btn-default col-md-offset-1 col-md-5 list-applicant-button" id="reject2" name="reject2">View Profile</button>
+                                       <button type="button" class=" search-result-btn btn btn-success col-md-offset-1 col-md-5 list-applicant-button" id="hire2" name="hire2">Hire</button>
+
+                                  </div>
+                              </div>
+                        </div>
+                      
+                </div>
+              </div>
+
+            </div> <!-- end of searchResultsContainerRow -->
+
+
+
+
+              <div class="row col-md-offset-1 col-md-9" id="paginationRow">
+
+                       <hr>
+
+                <div class="container col-md-offset-4 col-md-4" id="listApplicantGroupContainer">
+           
+
+              <div class="row" id="paginationRow">
+             <nav>
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            </div>
+        
+              </div> <!-- end of searchResultsGroupContainer -->
+                </div>
+
+
+          </div> <!-- end of searchResultsContainer -->
+
+      </div>
+  </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="seeMoreModal" tabindex="-1" role="dialog" aria-labelledby="seeMoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">//Applicant's name - Profile</h4>
+      </div>
+      <div class="modal-body">
+          <!-- script to display profile here -->
+      </div>
+      <div class="modal-footer button-row">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+</body>
+
+</html>
+

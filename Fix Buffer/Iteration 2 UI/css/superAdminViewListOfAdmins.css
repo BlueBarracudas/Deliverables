@@ -1,0 +1,23 @@
+.list-applicant{
+    border: 2px solid black;
+    margin: 3px 0px;
+    height: 30%;
+    padding: 15px;
+}
+
+#listOfApplicantsPanelTitle{
+    background-color: rgb(255,82,0);
+    background-image: none;
+}
+
+#listOfApplicantsHeader{
+    color: white;
+}
+
+
+
+/*.btn{
+		margin-top: 8px;
+		margin-bottom: 8px;
+}*/
+

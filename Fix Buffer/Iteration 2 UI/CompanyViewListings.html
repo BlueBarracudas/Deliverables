@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job List</title>
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link rel="stylesheet" href="css/bootstrap.theme.min.css">
+<link rel="stylesheet" href="css/admin_companyRegistration.css">
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style>
+        .btn {
+            background-image: none;
+            background-color: #ff5200;
+            color: white;
+        }
+    
+        .panel-default {
+            border: 1px solid black;
+        }
+    
+        .panel-heading {
+            background-image: none !important;
+            background-color: #ff5200 !important;
+            color: white !important;
+        }
+        
+        #approval-btn-group {
+
+            min-height: 100px;
+            max-height: 200px;
+            border-radius: 0px;
+            padding: 30px 5px;
+        }
+    
+        #job-list {
+            height: 600px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    
+        .job-item {
+            border-radius: 0px !important;
+            border: 1px solid black;
+        }
+    
+        .job-position {
+            padding-top: 10px;
+        }
+
+        .job-item .btn-group {
+            padding-top: 5px;
+        }
+    
+        .see-more-btn {
+            padding-left: 40px;
+        }
+    
+        .empty-span {
+            color: red;
+            position: relative;
+            left: 40%;
+        }
+    
+        .error-msg {
+            color: red;
+            visibility: hidden;
+        }
+    
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+        }
+    
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            width: 60%;
+            height: 40%;
+            padding: 16px;
+            border: 3px solid black;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+    
+        .popup {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #close-btn {
+            position: absolute;
+            top: 1%;
+            right: 1%
+        }
+</style>
+</head>
+<body onload="add_job_item()">
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>List of Jobs</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-10" id="job-list">
+                        <ul class="list-group" id="job-list-group">
+                            <li class="list-group-item job-item" id="job-item1">
+                                <div class="row">
+                                    <div class="col-md-1 checkbox">
+                                        <label><input type="checkbox"></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="job-position">{{job.Position}}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul>
+                                            <li>{{job.details}}</li>
+                                            <li>{{job.details}}</li>
+                                        </ul>
+                                        <button type="button" class="btn-link see-more-btn" onclick="details_enter()">See More</button>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-2">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn" onclick="edit_enter()">Edit</button>
+                                            <button type="button" class="btn delete-btn" id="delete1" onclick='delete_job_item(this)'>Delete</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group-vertical" id="approval-btn-group">
+                            <button type="button" class="btn" onclick="delete_all()">Delete All</button>
+                            <button type="button" class="btn" onclick="delete_selected()">Delete Selected</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!--Details Popup-->
+    <div id="popup-details" class="white_content">
+        <div class="container popup">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Job Details</h4>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-xs" id="close-btn" onclick = "details_exit()">
+                        <span class="glyphicon glyphicon-remove-circle"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Job Position:</div>
+                <div class="col-md-10"><span id="popup-job-details">{{job.Position}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Job Details:</div>
+                <div class="col-md-6">
+                    <ul class="list-group" id="popup-job-details">
+                        <li class="list-group-item">{{job.Detail}}</li>
+                        <li class="list-group-item">{{job.Detail}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-6">
+                    <div class="btn-group">
+                        <button class="btn">Edit</button>
+                        <button class="btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!--Edit Popup-->
+    <div id="popup-edit" class="white_content">
+        <div class="container popup">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Edit Job Details</h4>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-xs" id="close-btn" onclick = "edit_exit()">
+                        <span class="glyphicon glyphicon-remove-circle"></span>
+                    </button>
+                </div>
+            </div>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="job-postion">Job Position:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="job-postion">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="job-details">Job Details:</label>
+                    <div class="col-md-4" id="popup-job-detail-form">
+                        <input type="text" class="form-control" id="job-details1">
+                        <span class="error-msg">Error Message</span>
+                        <button type="button" class="btn-link" id="add_another_detail_btn" 
+                         onclick="popup_add_detail_form()">+add another Detail</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2 btn-group">
+                        <button type="submit" class="btn">Save</button>
+                        <button type="reset" class="btn" onclick = "edit_exit()">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div> 
+    </div>
+    <div id="fade" class="black_overlay"></div>
+</body>
+<script>
+    var numOfJobItems = 1;
+    var numOfDetailsPopup = 1;
+    function details_enter() {
+        document.getElementById('popup-details').style.display='block';
+        document.getElementById('fade').style.display='block';
+    }
+    function details_exit() {
+        document.getElementById('popup-details').style.display='none';
+        document.getElementById('fade').style.display='none';
+    }
+    
+    function edit_enter() {
+        document.getElementById('popup-edit').style.display='block';
+        document.getElementById('fade').style.display='block';
+    }
+    
+    function edit_exit() {
+        document.getElementById('popup-edit').style.display='none';
+        document.getElementById('fade').style.display='none';
+        edit_popup_reset();
+    }
+    
+    function popup_add_detail_form() {
+        numOfDetailsPopup++;
+        var $newdetail = $('<input type="text" class="form-control" id="job-details' + numOfDetailsPopup + '">');
+        $('#add_another_detail_btn').before($('<span class="error-msg">Error Message</span>'));
+        $('#add_another_detail_btn').before($newdetail);
+        var removebtn = document.createElement('button');
+        removebtn.setAttribute('class','btn-link');
+        removebtn.innerHTML = "Remove Detail";
+        removebtn.onclick = function() {
+            numOfDetailsPopup--;
+            $(this).prev().remove();
+            $(this).prev().remove();
+            $(this).remove();
+        }
+        $('#add_another_detail_btn').before(removebtn);
+    }
+    
+    function edit_popup_reset() {
+        if(numOfDetailsPopup > 1) {
+            for(i = numOfDetailsPopup; i > 1; i--) {
+                $('#add_another_detail_btn').prev().remove();
+                $('#add_another_detail_btn').prev().remove();
+                $('#add_another_detail_btn').prev().remove();
+            }
+            numOfDetailsPopup = 1;
+        }
+        
+    }
+    
+    function add_job_item() {
+            numOfJobItems++;
+            var $newitem = $('<li class="list-group-item job-item" id="job-item' + numOfJobItems + '"></li>');
+            var $newdiv = $('<div class="row"></div>');
+            var $newcol1 = $('<div class="col-md-1 checkbox"></div>');
+            $newcol1.append($('<label><input type="checkbox" value="selected"></label>'));
+            var $newcol2 = $('<div class="col-md-3"></div>');
+            var $newjobpostion = $('<p class="job-position">job.Detail</p>');
+            $newcol2.append($newjobpostion);
+            var $newcol3 = $('<div class="col-md-3"></div>');
+            var $newlist = $('<ul></ul>');
+            var $newlistitem = $('<li>job.Detail</li>');
+            $newlist.append($newlistitem);
+            $newcol3.append($newlist);
+            var $newbtn = $('<button type="button" class="btn-link see-more-btn" onclick="details_enter()">See More</button>');
+            $newcol3.append($newbtn);
+            var $newcol4 = $('<div class="col-md-3 col-md-offset-2"></div>');
+            var $newbtngroup = $('<div class="btn-group"></div>');
+            var $editbtn = $('<button type="button" class="btn" onclick="edit_enter()">Edit</button>');
+            var $deletebtn = $('<button type="button" class="btn delete-btn" onclick="delete_job_item(this)">Delete</button>');
+            $deletebtn.click(delete_job_item);
+            $newbtngroup.append($editbtn);
+            $newbtngroup.append($deletebtn);
+            $newcol4.append($newbtngroup);
+            $newdiv.append($newcol1);
+            $newdiv.append($newcol2);
+            $newdiv.append($newcol3);
+            $newdiv.append($newcol4);
+            $newitem.append($newdiv);
+            $('#job-list-group').append($newitem); 
+    }
+    
+    function delete_job_item(el) {
+        numOfJobItems--;
+        $(el).parents('.job-item').remove();
+        reset_id();
+        check_list();
+    }
+    
+    function delete_selected() {
+        if(numOfJobItems > 0) {
+           var temp = numOfJobItems;
+            for(i = 1; i <= temp; i++) {
+                if($('#job-item' + i + ' input').is(':checked')) {
+                    $('#job-item' + i).remove();
+                    numOfJobItems--;
+                }
+            } 
+        }
+        reset_id();
+        check_list();
+    }
+    
+    function delete_all() {
+        $('.job-item').remove();
+        numOfJobItems = 0;
+        check_list();
+    }
+    
+    function reset_id() {
+        if(numOfJobItems > 0) {
+            $('.job-item:first').attr('id','job-item1');
+            if(numOfJobItems > 1) {
+                for(i = 2; i <= numOfJobItems; i++) {
+                    $('#job-item' + (i-1)).next().attr('id','job-item' + i);
+                }
+            }
+        }
+    }
+    
+    function check_list() {
+        if(numOfJobItems == 0) {
+            $('#job-list-group').append($('<span class="empty-span">No Jobs Posted</span>"'));
+        }
+        else {
+            $('.empty-span').remove();
+        }
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</html>

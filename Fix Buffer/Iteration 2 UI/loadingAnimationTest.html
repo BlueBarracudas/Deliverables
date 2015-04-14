@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<style>
+			#home {
+				background: url('sprite.jpg') -350px 0;	
+				width:49.875px;
+				height:50px;
+			}
+		
+			#case{
+
+				margin-top:auto;
+				width:500px;
+				height:200px;
+				margin:auto;
+			}
+
+		</style>
+
+		<script>
+		var x=0;
+		var done=false;
+			function load(){
+				document.getElementById("home").style.background="url('sprite.jpg') "+x*-49.875+"px 0";
+				x++;
+			}
+			function init(){
+				loop();
+			}
+			function check(){
+				if(x==10){
+					done=true;
+				}
+			}
+			function loop(){
+				load();
+				check();
+				if(!done)
+					setTimeout(loop,100);
+				else{
+					document.getElementById("case").remove();
+				}
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="case" align="center">
+			<p align="center">please wait</p>
+		  <div id="home"></div>  
+		  <button align="center" onclick="init()">here</button>
+		</div>
+		
+		
+		
+	</body>
+</html>

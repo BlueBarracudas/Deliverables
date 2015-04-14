@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>Create Job Listing</title>
+    <style>
+      .container {
+          width: 35%;
+          border-radius: 5px;
+      }
+      #sched{
+        margin-left: 6%;
+      }
+
+      #workexp{
+        margin-left: 4%;
+      }
+
+      #file{
+        margin-left: 5%;
+      }
+      #buttons{
+        text-align: center;
+      }
+      #header {
+        background-color: #ff5200;
+        color: white;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+
+  <body>
+    <div class="container" id="mainContainer">
+      <div class="panel panel-default">
+        <div class="panel-heading" id="header"> <h3 class="panel-title">Create Job Listing:</h3></div>
+
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-3"><span style="color:red">*</span>Position: </div>
+            <div class="col-sm-5">
+              <div id="position">
+                  <input class="form-control input-sm" type="text" name="position">
+              </div>
+            </div> 
+          </div>
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-3"><span style="color:red">*</span>Skill(s) Required: </div>
+            <div class="col-sm-5">
+              <div id="skilllist">
+                <input class="form-control input-sm" type="text" name="skill">
+              </div>
+              <button type="button" class="btn btn-link" id="skilladd">+Add another Skill</button>
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-3">College Course Required: </div>
+            <div class="col-sm-5">
+             <div id="courselist">
+             <input class="form-control input-sm classcourse" id ="idcourse" type="text" name="course">
+             </div> 
+            <button type="button" class="btn btn-link" id="courseadd">+Add another Course</button>
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-3"><span style="color:red">*</span>Location:</div>
+            <div class="col-sm-5">
+               <textarea class="form-control" rows="2" id="location"></textarea>
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-3"><span style="color:red">*</span>Work hours per day: </div>
+            <div class="col-sm-2" id="workhours">
+              <input class="form-control input-sm" type="number" name="hours">
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-3"><span style="color:red">*</span>Work Schedule: </div>
+              <br>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="monday"> Monday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="tuesday"> Tuesday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="wednesday"> Wednesday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="thursday"> Thursday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="friday"> Friday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="saturday"> Saturday</input>
+              </div>
+              <div class="input-group" id="sched">
+                <input type="checkbox" id="sunday"> Sunday</input>
+              </div>
+          </div>
+          <br>
+          <br>
+
+        <div class="row">
+          <div class="col-sm-3">Certifications needed (optional): </div> <div class="col-sm-4">
+          <div id="certlist">
+            <input class="form-control input-sm" type="text" name="certification">
+          </div>    
+          <button type="button" class="btn btn-link" id="certadd">+Add another Certification</button> </div>
+        </div>
+        <br>
+
+        <h4>Work Experience</h4>
+        <br>
+        <div class="row" id="workexp">
+          <div class="col-sm-3">Experience needed: </div>
+          <div class="col-sm-4" id="experience">
+              <input class="form-control input-sm" type="text" name="title">
+          </div>
+          <div class="col-sm-2">Years of Experience: </div>
+          <div class="col-sm-2" id="expyears">
+              <input class="form-control input-sm" type="number" name="years">
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+          <div class="col-sm-8"><h4>Details: <br><small>(Attach a file with more details of the job, optional)</small></h4></div>
+          <br><br><br>
+          <div id="file">
+            <a href="#" onclick="uploadDoc()" id="file"></a>
+            <input type="file" id="theFile" />
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="form-group">
+          <div id="buttons">
+            <button type="button" class="btn btn-default">Cancel</button>      
+            <button type="button" class="btn btn-success">Create</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
