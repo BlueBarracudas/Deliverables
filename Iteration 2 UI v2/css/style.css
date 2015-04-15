@@ -88,3 +88,7 @@ a{
 	background-color: none !important;
 	background-image: none !important;
 }
+
+.btn-fill{
+	width: 100% !important;
+}
