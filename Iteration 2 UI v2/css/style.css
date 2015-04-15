@@ -50,7 +50,7 @@
 }
 
  label, .output-label{
- 	overflow: auto;
+ 	text-overflow: string;
  }
 
  .modal-header{
