@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company - List of Applicants</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/bootstrap.theme.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/errormessage.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/viewListOfInterviewedApplicants.css">
+  <!-- <link rel="stylesheet" href="css/admin_companyRegistration.css"> -->
+
+  <script src="js/jquery-2.1.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+<!-- 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+
+
+</head>
+
+<body>
+  <div class="container mainContainer" id="">
+      <dir class="row">
+         <div class="container" id="listOfApplicantsContainer">
+            <div class="row" id="listOfApplicantsContainerRow">
+                <div class=" col-md-offset-1 col-md-9">
+                <div class="panel panel-default" id="listOfApplicantsPanel">
+                           <div class="panel-heading" id="listOfApplicantsPanelTitle">
+                                  <h3 class="panel-title" id="listOfApplicantsHeader">Interviewed Applicants</h3> 
+                            </div>
+                      <div class="panel-body">
+                              <div class="row list-applicant" id="applicant1" name="applicant1">
+                                  <div class="col-md-3 list-applicant-info">
+                                     <label class="list-applicant-name-label" id="listApplicantNameLabel1" name="listApplicantNameLabel1">
+                                          Name:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-name output-label" id="listApplicantName1" name="listApplicantName1">
+                                          Juan De La Cruz
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-5 list-applicant-info">
+                                      <label  class="list-applicant-description-label" id="listApplicantDescriptionLabel1" name="listApplicantDescriptionLabel1">
+                                          Description:
+                                      </label>
+                                      <br>
+                                      <label  class="list-applicant-description" id="listApplicantDescription1" name="listApplicantDescription1">
+                                         Location : <span id="listApplicantDescriptionLocation" class="output-label">Manila</span> <br>
+                                         Course : <span id="listApplicantDescriptionCourse" class="output-label">BS Computer Science</span> <br>
+                                         School  :<span id="listApplicantDescriptionSchool" class="output-label">DLSU - Manila </span> <br>
+                                         <a data-toggle="modal" data-target="#viewProfileModal">See more</a>
+                                  
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-4"> 
+                                        <button type="button" class="btn btn-default col-md-offset-1 col-md-4 list-applicant-button" data-toggle="modal" data-target="#schedule-popup" id="reject1" name="reject1">Reject</button>
+
+                                         <button type="button" data-toggle="modal" data-target="#schedule-popup" class="btn btn-success col-md-offset-1 col-md-4 list-applicant-button" id="hire1" name="hire1">Hire</button>
+                                  </div>
+                              </div>
+
+
+                            
+
+
+                          <!--      <div class="row search-result" id="searchResult1" name="searchResult1">
+                                  <div class="col-md-3 search-result-info">
+                                     <label class="search-result-name-label" id="searchResultNameLabel1" name="searchResultNameLabel1">
+                                          Name:
+                                      </label>
+                                      <br>
+                                      <label  class="search-result-name output-label" id="searchResultName1" name="searchResultName1">
+                                          Juan De La Cruz
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-4 search-result-info">
+                                      <label  class="search-result-description-label" id="searchResultDescriptionLabel1" name="searchResultDescriptionLabel1">
+                                          Description:
+                                      </label>
+                                      <br>
+                                      <label  class="search-result-description" id="searchResultDescription1" name="searchResultDescription1">
+                                         Location : <span id="searchResultDescriptionCourse" class="output-label">Manila</span> <br>
+                                         Course : <span id="searchResultDescriptionCourse" class="output-label">BS Computer Science</span> <br>
+                                         School  :<span id="searchResultDescriptionSchool" class="output-label">DLSU - Manila </span> <br>
+                                      </label>
+                                  </div>
+
+                                  <div class="col-md-5"> 
+                                       <button type="button" class="btn btn-default col-md-offset-1 col-md-5 search-result-button" id="viewProfile1" name="viewProfile1"  data-toggle="modal" data-target="#viewProfileModal">View Profile</button>
+                                        <button type="button" class="btn btn-success col-md-offset-1 col-md-5 search-result-button" id="setAppointment1" name="setAppointment1"  data-toggle="modal" data-target="#schedule-popup">Set Appointment</button>
+                                  </div>
+                              </div> -->
+
+
+
+
+                        </div>
+                      
+                </div>
+              </div>
+
+            </div> <!-- end of searchResultsContainerRow -->
+
+
+    
+
+         <!--      <div class="row col-md-offset-1 col-md-9" id="paginationRow">
+
+                       <hr>
+
+                <div class="container col-md-offset-4 col-md-4" id="listApplicantGroupContainer">
+           
+
+              <div class="row" id="paginationRow">
+             <nav>
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            </div>
+        
+              </div> <!-- end of searchResultsGroupContainer -->
+                <!--</div>-->
+
+          </div> <!-- end of searchResultsContainer -->
+
+      </div>
+  </div>
+
+
+
+
+    <div id="schedule-popup" class="modal fade" data-backdrop="static">
+    
+        
+        
+        <div class="modal-dialog" id="schedule-container">
+            
+            
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header panel-heading">
+                    <h3 class="modal-title" id="schedule-popup-header">Feedback</h4>
+                </div>
+                <!--Body-->
+                <form class="form-horizontal" role="form" id="schedule-form">
+                    <div class="modal-body">
+                            <!--Reschedule Date group-->
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="name">Applicant Name:</label>
+                        </div>     
+                            <!--Reschedule Message Row-->
+                            <div class="form-group">
+                               <label class="control-label col-md-2" for="msg">Feedback:</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="schedule-msg" cols="50" placeholder="Enter Message"></textarea>
+                                    <span class="error_message error_container">Error Message</span>
+                                </div>
+                            </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="col-md-12 btn-row">
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="viewProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Sample Person's Profile</h3>
+      </div>
+      <div class="modal-body">
+        <iframe src="company-ApplicantProfileView.html"></iframe>
+      </div>
+      <div class="modal-footer button-row">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
+
