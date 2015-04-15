@@ -79,9 +79,9 @@
 
 								<form>
 									<div class="form-group">
-										<label class="col-md-12">Company Name</label>
+										<label class="col-md-12">Age</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control" id="companyInput" class="companyInput"/>
+											<input type="text" class="form-control" id="ageInput" class="ageInput"/>
 										</div>
 									</div>
 
@@ -89,9 +89,28 @@
 
 
 									<div class="form-group">
-										<label class="col-md-12">Job Position</label>
+										<label class="col-md-12">City</label>
 										<div class="col-md-12">
-											<input type="text" class="form-control" id="jobPositionInput" class="jobPositionInput"/>
+											<input type="text" class="form-control" id="cityInput" class="cityInput"/>
+										</div>
+									</div>
+
+									<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+
+									<div class="form-group">
+										<label class="col-md-12">Skills</label>
+										<div class="col-md-12">
+											<input type="text" class="form-control" id="skillsInput" class="skillsInput"/>
+										</div>
+									</div>
+
+									
+									<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+
+									<div class="form-group">
+										<label class="col-md-12">Certification Exam Taken</label>
+										<div class="col-md-12">
+											<input type="text" class="form-control" id="certificationExamInput" class="certificationExamInput"/>
 										</div>
 									</div>
 
@@ -104,27 +123,9 @@
 										</div>
 									</div>
 
-									<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
-
-
-									<div class="form-group">
-										<label class="col-md-12">Skills Required</label>
-										<div class="col-md-12">
-											<input type="text" class="form-control" id="skillsInput" class="skillsInput"/>
-										</div>
-									</div>
 
 									<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
-									<div class="form-group">
-										<label class="col-md-12">Location</label>
-										<div class="col-md-12">
-											<input type="text" class="form-control" id="locationInput" class="locationInput"/>
-										</div>
-									</div>
-
-									
-									<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 									<div class="form-group">
 										<label class="col-md-12">Work Experience</label>
 									
@@ -183,19 +184,19 @@
 
 			<div class="panel panel-default" id="result1">
 		        <div class="panel-heading">
-		            <h3 class="panel-title">Company name here - Position here</h3>
+		            <h3 class="panel-title">Applicant name here</h3>
 		        </div>
 
 		        <div class="panel-body">
 		            <div class="row">
 		            	<div class="col-md-6">
 		            		<label class="col-md-4">Location: </label> <label class="col-md-8 output-label">Location here</label>
-		            		<label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
-		            		<label class="col-md-4">Course Required: </label> <label class="col-md-8 output-label">Course here</label>
+		            		<label class="col-md-4">Course: </label> <label class="col-md-8 output-label">Course here</label>
+		            		<label class="col-md-4">School: </label> <label class="col-md-8 output-label">School here</label>
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol">
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing1" name="viewJobListing1" value="View Job Listing"/>
+		            		<div class="col-md-6 ">
+		            			<input type="button" class="btn btn-default btn-fill " id="viewProfile1" name="viewProfile1" value="View Profile"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill" id="apply1" name="apply1" value="Apply"/>
@@ -209,19 +210,19 @@
 
 			<div class="panel panel-default" id="result2">
 		        <div class="panel-heading">
-		            <h3 class="panel-title">Company name here - Position here</h3>
+		            <h3 class="panel-title">Applicant name here</h3>
 		        </div>
 
 		        <div class="panel-body">
 		            <div class="row">
 		            	<div class="col-md-6">
 		            		<label class="col-md-4">Location: </label> <label class="col-md-8 output-label">Location here</label>
-		            		<label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
-		            		<label class="col-md-4">Course Required: </label> <label class="col-md-8 output-label">Course here</label>
+		            		<label class="col-md-4">Course: </label> <label class="col-md-8 output-label">Course here</label>
+		            		<label class="col-md-4">School: </label> <label class="col-md-8 output-label">School here</label>
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol">
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing2" name="viewJobListing2" value="View Job Listing"/>
+		            		<div class="col-md-6 ">
+		            			<input type="button" class="btn btn-default btn-fill " id="viewProfile2" name="viewProfile2" value="View Profile"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill" id="apply2" name="apply2" value="Apply"/>
@@ -231,6 +232,9 @@
 		        </div>
 
 			</div> <!--  end of <div class="panel panel-default"> -->
+
+
+		
 
 
 
