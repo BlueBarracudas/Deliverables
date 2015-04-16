@@ -1,0 +1,30 @@
+Legend:
+
+US -> User Story
+before -> JobIT - Software Requirements Specification.docx
+after -> JobIT - Software Requirements Specification v1.1.docx
+
+"before:US 6 and US 8 -> after: US 6" -> means "The User Story #6 and 8 from JobIT - Software Requirements Specification.docx is now User Story # 6 in JobIT - Software Requirements Specification v1.1.docx "
+
+
+Changed
+before:US 4 -> after: US 4
+before:US 6 and US 8 -> after: US 6
+before:US 9 -> after: US 8
+before:US 10 -> after: US 9
+before:US 11 -> after: US 10
+before:US 12 -> after: US 11
+before:US 13 -> after: US 12
+before:US 14 -> after: US 13
+before:US 15 -> after: US 14
+before:US 16 -> after: US 15
+before:US 17 -> after: US 16
+before:US 18 -> after: US 17
+before:US 19 -> after: US 18
+before:US 20 -> after: US 19
+before:US 21 -> after: US 20
+before:US 22 -> after: US 21
+
+
+
+
