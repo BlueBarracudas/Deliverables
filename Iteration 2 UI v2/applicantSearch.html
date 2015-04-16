@@ -195,7 +195,7 @@
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol">
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing1" name="viewJobListing1" value="View Job Listing"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing1" name="viewJobListing1" value="View Job Listing"  data-toggle="modal" data-target="#viewProfileModal"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill" id="apply1" name="apply1" value="Apply"/>
@@ -221,7 +221,7 @@
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol">
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing2" name="viewJobListing2" value="View Job Listing"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="viewJobListing2" name="viewJobListing2" value="View Job Listing"   data-toggle="modal" data-target="#viewProfileModal"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill" id="apply2" name="apply2" value="Apply"/>
@@ -268,6 +268,34 @@
 
 </div>
 
+    
+    
+    
+    
+    
+<!-- Modal -->
+<div class="modal fade" id="viewProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Company name - Position</h3>
+      </div>
+      <div class="modal-body">
+        <iframe src="applicantViewJobListing.html"></iframe>
+      </div>
+      <div class="modal-footer button-row">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+    
 
 </body>
 

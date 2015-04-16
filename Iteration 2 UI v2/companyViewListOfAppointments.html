@@ -55,6 +55,8 @@
 								<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 								<div class="col-md-offset-1 col-md-10">
 									<input type="button" class="btn btn-default form-control " id="cancelSelectedButton" name="cancelSelectedButton" value="Cancel Selected"/>
+                                    								<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+						
 								</div>
 							</div>
 						</div>
@@ -86,13 +88,13 @@
 		            			<input type="button" class="btn btn-default btn-fill " id="reject1" name="reject1" value="Reject"/>
 		            		</div>
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-success btn-fill" id="reschedule1" name="reschedule1" value="Reschedule"/>
+		            			<input type="button" class="btn btn-success btn-fill" id="reschedule1" name="reschedule1" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
 		            		</div>
 
 		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
 		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
 		            		</div>
 		            		
 
@@ -119,13 +121,13 @@
 		            			<input type="button" class="btn btn-default btn-fill " id="reject2" name="reject2" value="Reject"/>
 		            		</div>
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-success btn-fill" id="reschedule2" name="reschedule2" value="Reschedule"/>
+		            			<input type="button" class="btn btn-success btn-fill" id="reschedule2" name="reschedule2" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
 		            		</div>
 
 		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
 		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment2" name="viewAppointment2" value="View Appointment"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment2" name="viewAppointment2" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
 		            		</div>
 		            		
 
@@ -171,8 +173,143 @@
 	</div>
 
 </div>
+    
+    
 
-
+   <!--Appointment Details Pop-up-->
+    <div id="details-popup" class="modal fade" role="dialog">
+        <div class="modal-dialog" id="details-container">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title" id="details-popup-header">Appointment Details</h4>
+                </div>
+                <!--Body-->
+                <div class="model-body">
+                    <!--Company Name-->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Applicant Name:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{applicant.Name}}</p>
+                        </div>
+                        
+                           <div class="col-md-3">
+                            <label>Applicant Email:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{applicant.email}}</p>
+                        </div>
+                   
+                           <div class="col-md-3">
+                            <label>Applicant Phone Number:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{applicant.cp#}}</p>
+                        </div>
+                    
+                        
+                    <!--Date-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Date:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p>{{appointment.Date}}</p>
+                        </div>
+                    </div>
+                    <!--Time-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Time:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <p>{{appointment.times}}</p>
+                        </div>
+                    </div>
+                    <!--Message-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="detail-msg">Message:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea class="form-control" disabled cols="20" id="resched-msg">{{Reschedule.Msg}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-md-12 btn-row">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Back </button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+        
+        
+        
+            
+    <!--Reschedule Pop-up-->
+    <div id="reschedule-popup" class="modal fade">
+        <div class="modal-dialog" id="reschedule-container">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title" id="details-popup-header">Reschedule</h4>
+                </div>
+                <!--Body-->
+                <form class="form-horizontal" role="form" id="reschedule-form">
+                    <div class="modal-body">
+                            <!--Reschedule Date group-->
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="date">Date:</label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>
+                            <!--Reschedule Time group-->
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="time">Time:</label>
+                                <div class="col-md-10">
+                                    <input type="time" class="form-control" id="reschedule-date" placeholder="Enter time">
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>            
+                            <!--Reschedule Message Row-->
+                            <div class="form-group">
+                               <label class="control-label col-md-2" for="msg">Message:</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="reschedule-msg" cols="50" placeholder="Enter Message"></textarea>
+                                    <span class="error-msg">Error Message</span>
+                                </div>
+                            </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="col-md-12 btn-row">
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+                                <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+    
+    
+    
+        
+    
 </body>
 
 <!-- js start -->
