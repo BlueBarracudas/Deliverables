@@ -24,7 +24,7 @@
 
 
 <!-- specific css start  -->
-<link rel="stylesheet" href="css/applicantProfileView.css">
+<link rel="stylesheet" href="css/search.css">
 <!-- specific css end  -->
 
 
@@ -44,28 +44,24 @@
  	<div class="row containerRow">
 		 		<div class="col-md-offset-2 col-md-8 containerCol">
 					<div class="panel panel-default profile-panel">
+
+						<div class="panel-heading">
+				            <h3 class="panel-title">Position here</h3>
+				        </div>
+
 					
 				  		<div class="panel-body">
+						  		
 						  		<div class="row">
-						  			<div class="col-md-3">
-						  				<img class="profileImg" src="#">
-						  			</div>
-
-						  			<div class="col-md-8">
-						  				<br>
-						  				<label class="output-label" id="nameOutput" name="nameOutput">Applicant's name here</label> <br>
-						  				<label class="output-label" id="birthdateOutput" name="birthdateOutput">Born on Birthdate here</label> <br>
-						  				<label class="output-label" id="genderOutput" name="genderOutput"> Gender here </label> <br>
-						  				<label class="output-label" id="maritalStatusOutput" name="maritalStatusOutput"> Marital Status here </label> <br>
-						  			</div>
-
+						  			<label class="col-md-4">College Course Required: </label>
+							  				<label class="output-label col-md-8" id="collegeCourseOutput" name="collegeCourseOutput">Applicant's college course here</label>
 						  		</div>
 
-						  		<br><br>
+						  		<br>
 
 						  		<div class="row">
 						  			<div class="col-md-12">
-							  			<h4>Education</h4>
+							  			<h4>Work Details</h4>
 							  			<hr>
 						  			</div>
 						  		</div>
@@ -73,17 +69,23 @@
 						  		<div class="row">
 						  			<div class="col-md-12">
 							  			<div class="row">
-							  				<label class="col-md-2">College: </label>
-							  				<label class="output-label col-md-4" id="collegeOutput" name="collegeOutput">Applicant's college here</label>
-
-							  				<label class="col-md-2">College Course: </label>
-							  				<label class="output-label col-md-4" id="collegeCourseOutput" name="collegeCourseOutput">Applicant's college course here</label>
+							  				<label class="col-md-3">Location: </label>
+							  				<label class="output-label col-md-9" id="locationOutput" name="locationOutput">Location here</label>
 							  			</div>
 
 							  			<div class="row">
-							  				<label class="col-md-2">Highschool: </label>
-							  				<label class="output-label col-md-10" id="hsOutput" name="hsOutput">Applicant's Highschool here</label>
+							  				<label class="col-md-3">Work Hours/Day: </label>
+							  				<label class="output-label col-md-9" id="hoursPerDayOutput" name="hoursPerDayOutput">Work Hours/Day here
+							  				</label>
 							  			</div>
+
+							  			<div class="row">
+							  				<label class="col-md-3">Work Schedule: </label>
+							  				<label class="output-label col-md-9" id="workScheduleOutput" name="workScheduleOutput">Work schedule here</label>
+
+							  			</div>
+
+				
 						  			</div>
 						  		</div>
 
@@ -142,21 +144,18 @@
 
 						  		<div class="row">
 						  			<div class="col-md-12">
-							  			<label class="col-md-4">Certificate</label>
-							  			<label class="col-md-4">Date Achieved</label>
-							  			<label class="col-md-4">Certificate of Competency</label>
+							  			<label class="col-md-6">Certificate</label>
+							  			<label class="col-md-6">Certificate of Competency</label>
 						  			</div>
 						  		</div>
 
 						  		<div class="row">
 						  			<div class="col-md-12">
-							  			<label class="output-label col-md-4" id="certificateOutput1" name="certificateOutput1">Certificate 1 here</label>
-							  			<label class="output-label col-md-4" id="dateAchievedOutput1" name="dateAchievedOutput1">Date achieved 1 here</label>
-							  			<label class="output-label col-md-offset-1 col-md-2" id="certificateOfCompetencyOutput1" name="certificateOfCompetencyOutput1"><span><i class="glyphicon glyphicon-ok"></i></span></label> <!--  if merong certificate of competency use <span><i class="glyphicon glyphicon-ok"></i></span>, pag wala use  <span><i class="glyphicon glyphicon-remove"></i></span> -->
+							  			<label class="output-label col-md-6" id="certificateOutput1" name="certificateOutput1">Certificate 1 here</label>
+							  			<label class="output-label col-md-offset-1 col-md-5" id="certificateOfCompetencyOutput1" name="certificateOfCompetencyOutput1"><span><i class="glyphicon glyphicon-ok"></i></span></label> <!--  if merong certificate of competency use <span><i class="glyphicon glyphicon-ok"></i></span>, pag wala use  <span><i class="glyphicon glyphicon-remove"></i></span> -->
 
-							  			<label class="output-label col-md-4" id="certificateOutput2" name="certificateOutput2">Certificate 2 here</label>
-							  			<label class="output-label col-md-4" id="dateAchievedOutput2" name="dateAchievedOutput2">Date achieved 2 here</label>
-							  			<label class="output-label col-md-offset-1 col-md-2" id="certificateOfCompetencyOutput2" name="certificateOfCompetencyOutput2"><span><i class="glyphicon glyphicon-remove"></i></span></label> <!--  if merong certificate of competency use <span><i class="glyphicon glyphicon-ok"></i></span>, pag wala use  <span><i class="glyphicon glyphicon-remove"></i></span> -->
+							  			<label class="output-label col-md-6" id="certificateOutput2" name="certificateOutput2">Certificate 2 here</label>
+							  			<label class="output-label col-md-offset-1 col-md-4" id="certificateOfCompetencyOutput2" name="certificateOfCompetencyOutput2"><span><i class="glyphicon glyphicon-remove"></i></span></label> <!--  if merong certificate of competency use <span><i class="glyphicon glyphicon-ok"></i></span>, pag wala use  <span><i class="glyphicon glyphicon-remove"></i></span> -->
 							  		
 						  			</div>
 						  		</div>
@@ -164,11 +163,11 @@
 
 						  		<br><br>
 
-						  		<div class="resumeContainer">
+						  		<div class="jobListingContainer">
 
 						  		<div class="row">
 						  			<div class="col-md-12">
-							  			<h4>Resume</h4>
+							  			<h4>Complete Job Listing Details</h4>
 							  			<hr>
 						  			</div>
 						  		</div>
@@ -181,6 +180,18 @@
 
 						  		</div>
 
+						  		<br><br>
+
+						  		<div class="row button-row">
+						  			<div class="col-md-12">
+						  				<input type="button" class="btn btn-default" id="backButton" value="Back"/>
+						  				<input type="button" class="btn btn-success" id="applyButton" value="Apply"/>
+						  			</div>
+						  
+						  		</div>
+
+
+						  
 
 
 
