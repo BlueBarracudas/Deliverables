@@ -25,6 +25,7 @@
 
 <!-- specific css start -->
 <link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="css/applicantViewListOfAppointments.css">   
 <!-- specific css end-->
 
 <!-- important initialization js files start -->
@@ -195,25 +196,26 @@
                         <div class="col-md-8">
                             <p>{{applicant.Name}}</p>
                         </div>
-                        
-                           <div class="col-md-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
                             <label>Applicant Email:</label>
                         </div>
                         <div class="col-md-8">
                             <p>{{applicant.email}}</p>
                         </div>
-                   
-                           <div class="col-md-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
                             <label>Applicant Phone Number:</label>
                         </div>
                         <div class="col-md-8">
                             <p>{{applicant.cp#}}</p>
                         </div>
-                    
-                        
+                    </div>
                     <!--Date-->
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>Date:</label>
                         </div>
                         <div class="col-md-8">
@@ -222,16 +224,16 @@
                     </div>
                     <!--Time-->
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>Time:</label>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <p>{{appointment.times}}</p>
                         </div>
                     </div>
                     <!--Message-->
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label for="detail-msg">Message:</label>
                         </div>
                         <div class="col-md-8">
@@ -272,7 +274,7 @@
                                 <label class="control-label col-md-2" for="date">Date:</label>
                                 <div class="col-md-10">
                                     <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
-                                    <span class="error-msg">Error Message</span>
+                                    <span class="error_message">Error Message</span>
                                 </div>
                             </div>
                             <!--Reschedule Time group-->
@@ -280,7 +282,7 @@
                                 <label class="control-label col-md-2" for="time">Time:</label>
                                 <div class="col-md-10">
                                     <input type="time" class="form-control" id="reschedule-date" placeholder="Enter time">
-                                    <span class="error-msg">Error Message</span>
+                                    <span class="error_message">Error Message</span>
                                 </div>
                             </div>            
                             <!--Reschedule Message Row-->
@@ -288,7 +290,7 @@
                                <label class="control-label col-md-2" for="msg">Message:</label>
                                 <div class="col-md-10">
                                     <textarea class="form-control" id="reschedule-msg" cols="50" placeholder="Enter Message"></textarea>
-                                    <span class="error-msg">Error Message</span>
+                                    <span class="error_message">Error Message</span>
                                 </div>
                             </div>
                     </div>

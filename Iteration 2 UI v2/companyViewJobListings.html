@@ -128,7 +128,7 @@
 		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
 		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill" id="view2" name="view2" value="View" data-toggle="modal" data-target="#viewJobListingModal"/>
+		            			<input type="button" class="btn btn-default btn-fill" id="view2" name="view2" value="View"/>
 		            		</div>
 		            		
 
@@ -173,78 +173,6 @@
 	</div>
 
 </div>
-
-    
-    
-    <!-- Modal -->
-<div class="modal fade" id="viewJobListingModal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="myModalLabel">Company name - Position</h3>
-      </div>
-      <div class="modal-body">
-        <iframe src="companyViewJobListing.html"></iframe>
-      </div>
-      <div class="modal-footer button-row">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-    
-    
-      <div id="edit-popup" class="modal fade">
-        <div class="modal-dialog" id="edit-container">
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header panel-heading">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title" id="edit-popup-header">Reschedule</h4>
-                </div>
-                <!--Body-->
-                <form class="form-horizontal" role="form" id="reschedule-form">
-                    <div class="modal-body">
-                            <!--Job Position input-->
-                            <div class="form-group">
-                                <label class="control-label col-md-2" for="edit-job-position">Job Postion:</label>
-                                <div class="col-md-10">
-                                    <input type="text" class="form-control" id="edit-job-position" placeholder="Enter Job Position">
-                                    <span class="error-msg">Error Message</span>
-                                </div>
-                            </div>
-                            <!--Job Details input-->
-                            <div class="form-group">
-                                <label class="control-label col-md-2" for="edit-job-details">Time:</label>
-                                <div class="col-md-10" id="edit-input-div">
-                                    <input type="text" class="form-control" id="edit-job-details1" placeholder="Enter Job Detail">
-                                    <span class="error-msg">Error Message</span>
-                                </div>
-                            </div>
-                            <div class="row btn-row">
-                                <button type="button" class="btn btn-link" id="add_another_detail_btn" onclick="popup_add_detail_form()">+add Another Job Detail</button>
-                            </div>
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer">
-                        <div class="form-group">
-                            <div class="col-md-12 btn-row">
-                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
-                                <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>  
-        </div>
-    </div>
-    
-    
-
 </body>
 
 <!-- js start -->
