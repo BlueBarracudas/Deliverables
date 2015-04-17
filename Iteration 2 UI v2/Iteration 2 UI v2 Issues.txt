@@ -13,3 +13,9 @@ remove "all" and "selected" - pending
 
 
 fix nav bars - pending
+
+
+NOTES (not issues):
+nav bars need their respective js and css to work
+nav bars
+modals

@@ -5,9 +5,10 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    '</div>' +
 		    '<div>' +
 		      '<ul class="nav nav-tabs navbar-nav">'+
-		        '<li id="home" class="active"><a href="superAdminHomePage.html" class="navigation">Home</a></li>'+  
-		        '<li id="RegisterCompany"><a href="">Register Company</a></li>'+
-               	'<li id="RegisterAdmin"><a href="superAdminRegisterAdmin.html">Register Admin</a></li>'+
+		        '<li id="home" class="active"><a href="#" class="navigation">Home</a></li>'+
+		        '<li id="profile"><a href="#applicantProfile" data-toggle="tab" class="navigation">Profile</a></li>'+
+		        '<li id="search"><a href="#searchListings" data-toggle="tab" class="navigation">Search Job Listings</a></li> '+
+		        '<li id="appointments"><a href="#viewAppointments" data-toggle="tab" class="navigation">Appointments</a></li> '+
 		      '</ul>' +
 		      '<ul class="nav navbar-nav navbar-right">' +
 		      	'<li class="dropdown">'+
@@ -27,7 +28,7 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 						'<a id="notif" href="#"><center>Notification Settings</center></a>' +
 	        		'</ul>' +
 				        '<li class="dropdown">' +
-		          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Super Admin Name <span class="caret"></span></a> ' +
+		          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Applicant Name <span class="caret"></span></a> ' +
 			          	'<ul class="dropdown-menu" role="menu">' +
 			            '<li id="settings"><a href="#">Account Settings</a></li>' +
 			            '<li><a href="#">Sign Out</a></li>' +
@@ -37,9 +38,23 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    
 	  	'</div>' +
 	'</nav>';
+	// <div class="tab-content">
+	// 	<div class= "content tab-pane" id="companyregister">
+	// 		<object type="text/html" data="adminRegisterCompany.html" ></object>
+	// 	</div>
+	// 	<div class= "content tab-pane" id="adminregister">
+	// 		<object type="text/html" data="adminRegistration.html" ></object>
+	// 	</div>
+	// </div>';
 			          
 		       
 
 document.write(navBar);
 
+$(document).ready(function () {
+    $(".nav .navigation").on("click", function(){
+        $(".nav").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+    });
+	});
 
