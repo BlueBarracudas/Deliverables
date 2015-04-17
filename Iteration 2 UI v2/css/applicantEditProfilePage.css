@@ -29,6 +29,7 @@
 
   #otherCertification{
     display: none;
+    padding-top: 10px;
   }
 
   #hschooladd, #collegeadd, #courseadd{

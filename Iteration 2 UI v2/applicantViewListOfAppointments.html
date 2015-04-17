@@ -87,7 +87,7 @@
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol button-row">
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="reject1" name="reject1" value="Reject"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="cancel1" name="cancel1" value="Cancel"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment"data-toggle="modal" data-target="#details-popup"/>
@@ -129,7 +129,7 @@
 		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
 		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill" id="reschedule1" name="reschedule1" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
+		            			<input type="button" class="btn btn-default btn-fill" id="accept1" name="accept1" value="Accept" data-toggle="modal" data-target="#reschedule-popup"/>
 		            		</div>
 		            		
 
@@ -273,7 +273,7 @@
                                 <label class="control-label col-md-2" for="date">Date:</label>
                                 <div class="col-md-10">
                                     <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
-                                    <span class="error-msg">Error Message</span>
+                                     <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>
                             <!--Reschedule Time group-->
@@ -281,7 +281,7 @@
                                 <label class="control-label col-md-2" for="time">Time:</label>
                                 <div class="col-md-10">
                                     <input type="time" class="form-control" id="reschedule-date" placeholder="Enter time">
-                                    <span class="error-msg">Error Message</span>
+                                     <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>            
                             <!--Reschedule Message Row-->
@@ -289,7 +289,7 @@
                                <label class="control-label col-md-2" for="msg">Message:</label>
                                 <div class="col-md-10">
                                     <textarea class="form-control" id="reschedule-msg" cols="50" placeholder="Enter Message"></textarea>
-                                    <span class="error-msg">Error Message</span>
+                                    <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>
                     </div>
@@ -297,8 +297,8 @@
                     <div class="modal-footer">
                         <div class="form-group">
                             <div class="col-md-12 btn-row">
-                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
                                 <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
                             </div>
                         </div>
                     </div>
