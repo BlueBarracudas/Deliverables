@@ -1,0 +1,10 @@
+Iteration 2 UI v2 Issues
+
+applicantEditProfile(BUG).html
+applicantSearch.html
+applicantViewListOfAppointments.html
+companyCreateJobListing.html
+companySearch.html
+companyViewInterviewedApplicants.html
+companyViewJobListing.html
+companyViewListOfAppointments.html
