@@ -72,7 +72,7 @@
 							            	</div>
 							            	<div class="col-md-6 resultButtonCol">
 							            		<div class="col-md-offset-1 col-md-10 ">
-							            			<input type="button" class="btn btn-default btn-fill" id="deactivate1" name="deactivate1" value="Deactivate"/>
+							            			<input type="button" class="btn btn-default btn-fill" id="deactivate1" onclick="deactivateOnClick(this)" name="deactivate1" value="Deactivate"/>
 							            		</div>
 							            
 							            	</div>
@@ -95,7 +95,29 @@
 							            	</div>
 							            	<div class="col-md-6 resultButtonCol">
 							            		<div class="col-md-offset-1 col-md-10 ">
-							            			<input type="button" class="btn btn-success btn-fill" id="activate1" name="activate1" value="Activate"/>
+							            			<input type="button" class="btn btn-success btn-fill" id="activate1" name="activate2" onclick="activateOnClick(this)" value="Activate"/>
+							            		</div>
+							            
+							            	</div>
+							            </div>
+							        </div>
+
+								</div> <!--  end of <div class="panel panel-default"> -->
+
+									<div class="panel panel-default" id="result3">
+							             <div class="panel-heading">
+							            <h3 class="panel-title">Email here</h3>
+							        </div>
+
+							        <div class="panel-body">
+							            <div class="row">
+							            	<div class="col-md-6">
+							            		<br>
+							            		<label class="col-md-4">Status: </label> <label class="col-md-8 output-label">status here</label>
+							            	</div>
+							            	<div class="col-md-6 resultButtonCol">
+							            		<div class="col-md-offset-1 col-md-10">
+							            			<input type="button" class="btn btn-success btn-fill" id="activate3" name="activate3" onclick="activateOnClick(this)" value="Activate"/>
 							            		</div>
 							            
 							            	</div>
@@ -157,6 +179,7 @@
 
 <!-- js start -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/superAdminViewListOfAdmins.js"></script>    
 <!-- js end -->
 
 </html>

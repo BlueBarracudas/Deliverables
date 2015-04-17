@@ -71,7 +71,7 @@
      <div class="col-sm-9">
          <div id="courselist">
 
-          <select id="collegeCourseInput" onchange="otherCourse()" name="collegeCourseInput" class="form-control" >
+          <select id="collegeCourseInput" onchange="otherCourse(this)" name="collegeCourseInput" class="form-control" >
                             <option value="" disabled selected>--- Select ---</option>
                             <option value="BS-CS (Computer Science)">BS-CS (Computer Science)</option>
                             <option value="BS-CE (Computer Engineering)" >BS-CE (Computer Engineering)</option>
@@ -178,7 +178,7 @@
   <div class="col-sm-3"><label>Certification(s):</label> </div> <div class="col-md-7">
         <div id="certlist">
 
-             <select class="form-control input-sm classcert" onchange="otherCert()" type="text" name="certification[]" id="certification[]">
+             <select class="form-control input-sm classcert" onchange="otherCert(this)" type="text" name="certification[]" id="certification[]">
                             <option value="" disabled selected>--- Select Certificate ---</option>
                             <option value="Cisco Certified Network Associate (CCNA)">Cisco Certified Network Associate (CCNA)</option>
                             <option value="Cisco Certified Network Professional (CCNP)" >Cisco Certified Network Professional (CCNP)</option>

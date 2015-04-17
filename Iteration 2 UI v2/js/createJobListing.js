@@ -14,89 +14,32 @@ $(document).ready(function(){
 });
 
 
-
-
-
- 
- function otherCollege(){
-    var x = document.getElementById("collegeInput").value;
-
-    if (x=="Other")
-      document.getElementById("othercollegeinput").style.display = 'block';
-    else
-      document.getElementById("othercollegeinput").style.display = 'none';
- }
- 
- function otherCourse(){
-    var x = document.getElementById("collegeCourseInput").value;
-
-    if (x=="Other")
-      document.getElementById("othercourseinput").style.display = 'block';
-    else
-      document.getElementById("othercourseinput").style.display = 'none';
- }
-
- function otherCert(){
-    var x = document.getElementById("certification[]").value;
-
-    if (x=="Other")
-      document.getElementById("otherCertification").style.display = 'block';
-    else
-      document.getElementById("otherCertification").style.display = 'none';
- }
-
-
- $( "#skilladd" ).click(function(){
-        var br = document.createElement('br');
-     var br2 = document.getElementById("skilllist");
-    br2.appendChild(br);
-    var newfield = document.createElement("input");
-    newfield.setAttribute("class","form-control input-sm");
-    newfield.setAttribute("type","text");
-    newfield.setAttribute("name","skills[]");
-    var newerrormsg = document.createElement("div");
-    numOfSkills++;
-    newerrormsg.setAttribute("class","error_container");
-    newerrormsg.setAttribute("id","skill_errorMessageContainer"+numOfSkills);
-    var newerrorlbl = document.createElement("label");
-    newerrorlbl.setAttribute("class","error_message");
-    newerrorlbl.setAttribute("id","skill_errorMessage"+numOfSkills);
-    newerrorlbl.setAttribute("name","skill_errorMessage"+numOfSkills);
-    newerrorlbl.innerHTML = "<?php echo $skErr; ?>";
-    newerrormsg.appendChild(newerrorlbl);
-    $("#skilllist").append(newfield);
-    $("#skilllist").append(newerrormsg);
-    var remove = document.createElement("button");
-    remove.setAttribute("class","btn btn-link");
-    remove.innerHTML = "Remove Skill"
-    remove.onclick = function() {
-        $(this).prev().remove();
-        $(this).prev().remove();
-        $(this).prev().remove();
-        $(this).remove();
-        numOfSkills--;
-    }
-    $("#skilllist").append(remove);
-});
-
-
 $( "#certadd" ).click(function(){
-    $('#certlist').append($('<br>'));
-    $('#certlist').append($('<br>'));
+    $newdiv = $('<div>');
+    $newdiv.append($('<br>'));
     
     numOfCertifications++;
     //Create new select
     //Append the numOfCertifications to corresponding ids
-    var $newselect = $('<select class="form-control input-sm classcert" type="text" name="certification[]" id="certification[]' + numOfCertifications + '"></select');
+    var $newselect = $('<select class="form-control input-sm classcert" type="text" onchange="otherCert(this)" name="certification[]" id="certification[]' + numOfCertifications + '"></select');
     $newselect.append($('<option value="" disabled selected>--- Select Certificate ---</option>'));
     $newselect.append($('<option value="Cisco Certified Network Associate (CCNA)">Cisco Certified Network Associate (CCNA)</option>'));
     $newselect.append($('<option value="Cisco Certified Network Professional (CCNP)" >Cisco Certified Network Professional (CCNP)</option>'));
-	$newselect.append($('<option value="Other" >Other</option>'));
+    $newselect.append($('<option value="Other" >Other</option>'));
     //Append the new select element
-    $('#certlist').append($newselect);
+    $newdiv.append($newselect);
+
+    var $newOther = $('<div id="otherCertification">');
+    $newOther.append($('<label class="col-md-3 otherCert-label control-label">Other:</label>'));
+    var $inputdiv = $('<div class="col-md-9">');
+    $inputdiv.append($('<input class="form-control otherCert-input input-sm othercourse" type="text" id="othercourse" name="othercourse">'));
+    $newOther.append($inputdiv);
+    $newOther.append($('<br>'));
+    $newOther.append($('<br>'));
+    $newdiv.append($newOther);
     
     //Create new Date Achieved field
-    var $newdateachievedlabel = $('<label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>');
+    //var $newdateachievedlabel = $('<label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>');
     //Append the label
     // $('#certlist').append($newdateachievedlabel);
     // var $newdateachievedinput = $('<div class="col-md-7 dateachieved-input"></div>');
@@ -105,18 +48,17 @@ $( "#certadd" ).click(function(){
     // $('#certlist').append($newdateachievedinput);
     
     // //Insert new br
-    // $('#certlist').append($('<br>'));
     
     //Create new Certificate of Competency field
     var $newcertcompetency = $('<div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
     //Append the new certificate of competency field
-    $('#certlist').append($newcertcompetency);
+     $newdiv.append($newcertcompetency);
     
     //Create new error message
     var $newerrormsg = $('<div class="error_container" id="cert_errorMessageContainer' + numOfCertifications + '"></div>');
     $newerrormsg.append($('<label class="error_message" id="cert_errorMessage' + numOfCertifications + '" name="cert_errorMessage' + numOfCertifications + '"><?php echo $ceErr; ?></label>'));
     //Append the new error message
-    $('#certlist').append($newerrormsg);
+    $newdiv.append($newerrormsg);
     
     //Create remove btn to remove the added stuff
     var $newremovebtn = $('<button type="button" class="btn btn-link">Remove Certification</button>');
@@ -128,9 +70,8 @@ $( "#certadd" ).click(function(){
         $(this).prev().remove();
         $(this).prev().remove();
         $(this).prev().remove();
-        // $(this).prev().remove();
-        // $(this).prev().remove();
-        // $(this).prev().remove();
+        $(this).prev().remove();
+        $(this).prev().remove();
         $(this).remove();
     });
 
@@ -142,11 +83,12 @@ $('[data-toggle="tooltip"]').tooltip({
 
 
     //Append new remove btn
-    $('#certlist').append($newremovebtn);
+    $newdiv.append($newremovebtn);
     $('[data-toggle="tooltip"]').attr('title','Check if you require the applicant to have passed Experts Academy\'s Skill Assesment Test for this Certification');    
     $('[data-toggle="tooltip"]').tooltip({
         placement : 'right'
     });
+     $('#certlist').append($newdiv);
 });
 
 /*
@@ -284,6 +226,39 @@ function performClick(elemId) {
   }
  }
 
+function otherCourse(input){
+    var x = input.value;
+    var y = document.getElementById("othercourseinput");
+    if (x == "Other"){
+        y.style.display = "block";
+    }
+    else {
+        document.getElementById("othercourse").value = "";
+        y.style.display ="none";
+    }
+}
+
+function otherCert(input){
+    var x = input.value;
+    var div = input.parentNode;
+    var y = document.getElementById("otherCertification");
+    var child, child2;
+    if (x == "Other"){ //get and display child
+        for (i = 0; i<div.childNodes.length; i++){
+            child = div.childNodes[i];
+            if (child.id == "otherCertification")
+                child.style.display = "block";
+        }
+    }
+    else {
+        for (i = 0; i<div.childNodes.length; i++){
+            child = div.childNodes[i];
+            if (child.id == "otherCertification"){
+                child.style.display = "none";
+            }
+        }
+    }
+}
 
 
 

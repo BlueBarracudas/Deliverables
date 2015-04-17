@@ -39,143 +39,143 @@
 <body>
 
 
+
 <div class="container mainContainer">
-	<div class="row containerRow">
-		<div class="col-md-3">
 
-			<div class="panel panel-default">
-			    
-			        <div class="panel-body">
-			            
-						<div class="row center">
-							<div class="form-group">
-								<div class="col-md-offset-1 col-md-10">
-									<input type="button" class="btn btn-default form-control" id="cancelAllButton" name="cancelAllButton" value="Cancel All"/>
-								</div>
+    <div class="row containerRow">
+                <div class="col-md-offset-1 col-md-10 containerCol">
+                    <div class="panel panel-default profile-panel">
 
-								<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
-								<div class="col-md-offset-1 col-md-10">
-									<input type="button" class="btn btn-default form-control " id="cancelSelectedButton" name="cancelSelectedButton" value="Cancel Selected"/>
-                                    								<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
-						
-								</div>
-							</div>
-						</div>
+                    
+                        <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>Appointments</h3>
+                                        <hr>
+                                    </div>
 
-			        </div>
-
-			</div> <!--  end of <div class="panel panel-default"> -->
+                                </div>
 
 
+                                <div class="row" id="listContainer">
 
-		</div>
+                                    <div class=" col-md-12">
+        <div class="panel panel-default" id="appointment1">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Applicant name here</h3>
+                </div>
 
-		<div class="col-md-8">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+                            <label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
+                            <label class="col-md-4">Date and Time: </label> <label class="col-md-8 output-label">Date and time here</label>
+                        </div>
+                        <div class="col-md-6 resultButtonCol button-row">
+                            <div class="col-md-6">
+                                <input type="button" class="btn btn-default btn-fill " id="reject1" name="reject1" value="Reject"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="button" class="btn btn-success btn-fill" id="reschedule1" name="reschedule1" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
+                            </div>
 
-			<div class="panel panel-default" id="appointment1">
-		        <div class="panel-heading">
-		            <h3 class="panel-title">Applicant name here</h3>
-		        </div>
+                            <div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
-		        <div class="panel-body">
-		            <div class="row">
-		            	<div class="col-md-6">
-		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
-		            		<label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
-		            		<label class="col-md-4">Date and Time: </label> <label class="col-md-8 output-label">Date and time here</label>
-		            	</div>
-		            	<div class="col-md-6 resultButtonCol button-row">
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="reject1" name="reject1" value="Reject"/>
-		            		</div>
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-success btn-fill" id="reschedule1" name="reschedule1" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
-		            		</div>
+                            <div class="col-md-12">
+                                <input type="button" class="btn btn-default btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
+                            </div>
+                            
 
-		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+                        </div>
+                    </div>
+                </div>
 
-		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
-		            		</div>
-		            		
+            </div> <!--  end of <div class="panel panel-default"> -->
 
-		            	</div>
-		            </div>
-		        </div>
+            <div class="panel panel-default" id="appointment2">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Applicant name here</h3>
+                </div>
 
-			</div> <!--  end of <div class="panel panel-default"> -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+                            <label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
+                            <label class="col-md-4">Date and Time: </label> <label class="col-md-8 output-label">Date and time here</label>
+                        </div>
+                        <div class="col-md-6 resultButtonCol button-row">
+                            <div class="col-md-6">
+                                <input type="button" class="btn btn-default btn-fill " id="reject2" name="reject2" value="Reject"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="button" class="btn btn-success btn-fill" id="reschedule2" name="reschedule2" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
+                            </div>
 
-			<div class="panel panel-default" id="appointment2">
-		        <div class="panel-heading">
-		            <h3 class="panel-title">Applicant name here</h3>
-		        </div>
+                            <div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
 
-		        <div class="panel-body">
-		            <div class="row">
-		            	<div class="col-md-6">
-		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
-		            		<label class="col-md-4">Position: </label> <label class="col-md-8 output-label">Position here</label>
-		            		<label class="col-md-4">Date and Time: </label> <label class="col-md-8 output-label">Date and time here</label>
-		            	</div>
-		            	<div class="col-md-6 resultButtonCol button-row">
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="reject2" name="reject2" value="Reject"/>
-		            		</div>
-		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-success btn-fill" id="reschedule2" name="reschedule2" value="Reschedule" data-toggle="modal" data-target="#reschedule-popup"/>
-		            		</div>
+                            <div class="col-md-12">
+                                <input type="button" class="btn btn-default btn-fill " id="viewAppointment2" name="viewAppointment2" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
+                            </div>
+                            
 
-		            		<div class="form-group form-group-spacer"><label class="col-md-12">space</label></div> <!-- used as spacing -->
+                        </div>
+                    </div>
+                </div>
 
-		            		<div class="col-md-12">
-		            			<input type="button" class="btn btn-default btn-fill " id="viewAppointment2" name="viewAppointment2" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>
-		            		</div>
-		            		
-
-		            	</div>
-		            </div>
-		        </div>
-
-			</div> <!--  end of <div class="panel panel-default"> -->
-
-
-		
+            </div> <!--  end of <div class="panel panel-default"> -->
 
 
 
-
-
-			<hr id="bottomOfResults">
-
-	<!-- 		<nav class="center">
-			  <ul class="pagination">
-			    <li>
-			      <a href="#" aria-label="Previous">
-			        <span aria-hidden="true">&laquo;</span>
-			      </a>
-			    </li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li>
-			      <a href="#" aria-label="Next">
-			        <span aria-hidden="true">&raquo;</span>
-			      </a>
-			    </li>
-			  </ul>
-			</nav> -->
+                                </div>
 
 
 
-		</div>
+            <div class="col-md-12">         
+            <hr id="bottomOfResults">
+            </div>
 
-	</div>
+  <!--          <nav class="center">
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav> -->
 
-</div>
-    
-    
+
+
+                                </div>
+
+                            
+
+                                
+
+
+
+
+                           
+                        </div>
+
+                    </div> <!--  end of <div class="panel panel-default"> -->
+                </div>
+     </div>
+</div>  <!-- end of <div class="container mainContainer"> -->
+
+
 
    <!--Appointment Details Pop-up-->
     <div id="details-popup" class="modal fade" role="dialog">
@@ -274,7 +274,7 @@
                                 <label class="control-label col-md-2" for="date">Date:</label>
                                 <div class="col-md-10">
                                     <input type="date" class="form-control" id="reschedule-date" placeholder="Enter date">
-                                    <span class="error_message">Error Message</span>
+                                    <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>
                             <!--Reschedule Time group-->
@@ -282,7 +282,7 @@
                                 <label class="control-label col-md-2" for="time">Time:</label>
                                 <div class="col-md-10">
                                     <input type="time" class="form-control" id="reschedule-date" placeholder="Enter time">
-                                    <span class="error_message">Error Message</span>
+                                    <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>            
                             <!--Reschedule Message Row-->
@@ -290,7 +290,7 @@
                                <label class="control-label col-md-2" for="msg">Message:</label>
                                 <div class="col-md-10">
                                     <textarea class="form-control" id="reschedule-msg" cols="50" placeholder="Enter Message"></textarea>
-                                    <span class="error_message">Error Message</span>
+                                    <span class="error_message error_container">Error Message</span>
                                 </div>
                             </div>
                     </div>
@@ -298,8 +298,8 @@
                     <div class="modal-footer">
                         <div class="form-group">
                             <div class="col-md-12 btn-row">
-                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
                                 <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
                             </div>
                         </div>
                     </div>
