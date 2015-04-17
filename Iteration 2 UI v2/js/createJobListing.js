@@ -190,11 +190,11 @@ $( "#workadd" ).click(function(){
     var $newjobtitlediv = $('<div class="row"></div>');
     
     //Create subrows
-    var $firstrow = $('<div class="row"></div>'); //Should contain the Job Title and Years of Experience
-    var $secondrow = $('<div class="row"></div>'); //Should contain the Company
+    // var $firstrow = $('<div class="row"></div>'); //Should contain the Job Title and Years of Experience
+    // var $secondrow = $('<div class="row"></div>'); //Should contain the Company
     
     //Job Title
-    var $newjobtitlelabel = $('<div class=" col-md-2"><label>Job Title:</label> </div>');
+    var $newjobtitlelabel = $('<div class=" col-md-3"><label>Job Title:</label> </div>');
     //append the numOfJobTitles to the correspoding ids
     var $newjobtitlelist = $('<div class="col-md-5" id="titlelist' + numOfJobTitles + '"></div>'); 
     $newjobtitlelist.append($('<input class="form-control input-sm" type="text" name="jobtitle[]">'));
@@ -221,20 +221,26 @@ $( "#workadd" ).click(function(){
     // $newcompanylist.append($newcompanyerrormsg);
     
     //Append them all to the new row div
-    $firstrow.append($newjobtitlelabel);
-    $firstrow.append($newjobtitlelist);
-    $firstrow.append($newyearlabel);
-    $firstrow.append($newyearlist);
-    // $secondrow.append($newcompanylabel);
-    // $secondrow.append($newcompanylist);
-    $newjobtitlediv.append($firstrow);
-    $newjobtitlediv.append($secondrow);
+    // $firstrow.append($newjobtitlelabel);
+    // $firstrow.append($newjobtitlelist);
+    // $firstrow.append($newyearlabel);
+    // $firstrow.append($newyearlist);
+    // // $secondrow.append($newcompanylabel);
+    // // $secondrow.append($newcompanylist);
+    // $newjobtitlediv.append($firstrow);
+    // $newjobtitlediv.append($secondrow);
+
+
+    $newjobtitlediv.append($newjobtitlelabel);
+    $newjobtitlediv.append($newjobtitlelist);
+    $newjobtitlediv.append($newyearlabel);
+    $newjobtitlediv.append($newyearlist);
     
     $(this).parent().before($newjobtitlediv);
     
     //Create new remove button that will remove the div before it
     var $newremovediv = $('<div class="row"></div>');
-    var $newremovebtn = $('<button class="btn btn-link col-sm-offset-2">Remove Job Title</button>');
+    var $newremovebtn = $('<button class="btn btn-link col-md-offset-3">Remove Job Title</button>');
     $newremovebtn.click(function(){
         numOfJobTitles--;
         $(this).parent().prev().remove();
@@ -246,6 +252,28 @@ $( "#workadd" ).click(function(){
     
     $(this).parent().before($newremovediv);
 });
+
+
+ // <div class="row">
+ //  <div class="col-md-3"><label>Job Title:</label> </div>
+ //  <div class="col-md-5" id="titlelist">
+ //  <input class="form-control input-sm" type="text" name="jobtitle[]">  
+   
+ //  <div class="error_container" id="jobTitle_errorMessageContainer1"><label class="error_message" id="jobTitle_errorMessage1" name="jobTitle_errorMessage1"><?php echo $jtErr; ?></label></div>
+   
+   
+   
+ //  </div>
+ //  <div class="col-md-2"><label>Years of Experience:</label> </div>
+ //  <div class="col-md-2" id="yearslist">
+ //  <input class="form-control input-sm" type="number" name="workExp[]">
+   
+   
+   
+ //  <div class="error_container" id="yearsOfExperience_errorMessageContainer1"><label class="error_message" id="yearsOfExperience_errorMessage1" name="yearsOfExperience1"><?php echo $weErr; ?></label></div>
+
+
+
 
 function performClick(elemId) {
    var elem = document.getElementById(elemId);

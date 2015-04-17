@@ -1,10 +1,15 @@
 Iteration 2 UI v2 Issues
 
-applicantEditProfile(BUG).html
-applicantSearch.html
-applicantViewListOfAppointments.html
-companyCreateJobListing.html
-companySearch.html
-companyViewInterviewedApplicants.html
-companyViewJobListing.html
-companyViewListOfAppointments.html
+applicantEditProfile.html - fixed
+applicantSearch.html - fixed
+applicantViewListOfAppointments.html - pending
+companyCreateJobListing.html - pending; add cert
+companySearch.html - fixed
+companyViewInterviewedApplicants.html - checked, nothing to change
+companyViewJobListing.html - done
+companyViewListOfAppointments.html - pending
+
+remove "all" and "selected" - pending
+
+
+fix nav bars - pending
