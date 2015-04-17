@@ -5,9 +5,9 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    '</div>' +
 		    '<div>' +
 		      '<ul class="nav nav-tabs navbar-nav">'+
-		        '<li id="home"><a href="" class="navigation">Home</a></li>'+  
-		        '<li id="RegisterCompany"><a href=" data-toggle="tab">Register Company</a></li>'+
-               	'<li id="RegisterAdmin"><a href="" data-toggle="tab">Register Admin</a></li>'+
+		        '<li id="home" ><a href="superAdminHomePage.html" class="navigation">Home</a></li>'+  
+		        '<li id="RegisterCompany"><a href="">Register Company</a></li>'+
+               	'<li id="RegisterAdmin" class="active"><a href="superAdminRegisterAdmin.html">Register Admin</a></li>'+
 		      '</ul>' +
 		      '<ul class="nav navbar-nav navbar-right">' +
 		      	'<li class="dropdown">'+
@@ -36,24 +36,10 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 		    '</div>' +
 		    
 	  	'</div>' +
-	'</nav>'+
-		 '<div class="tab-content">'+
-	 	'<div class= "content tab-pane" id="companyregister">'+
-	 '<object type="text/html" data="adminRegisterCompany.html" ></object>'+
-	 	'</div>'+
-	 	'<div class= "content tab-pane" id="superAdminRegisterAdmin">'+
-	 		'<object type="text/html" data="adminRegistration.html" ></object>'+
-	 	'</div>'+
-	 '</div>';
+	'</nav>';
 			          
 		       
 
 document.write(navBar);
 
-$(document).ready(function () {
-    $(".nav .navigation").on("click", function(){
-        $(".nav").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
-    });
-	});
 
