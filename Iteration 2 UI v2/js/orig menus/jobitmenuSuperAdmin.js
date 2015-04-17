@@ -24,7 +24,7 @@ var    navBar = '	<nav class="navbar navbar-fixed-top navbar-custom"> ' +
 						  '<a href="#" class="list-group-item">Porta ac consectetur ac <div class="timestamp" align="right">12:47pm</div></a>' +
 						  '<a href="#" class="list-group-item">Vestibulum at eros <div class="timestamp" align="right">12:47pm</div></a>'+
 						'</div>' +
-						'<a id="notif" href="#"><center>Notification Settings</center></a>' +
+					'<button id="notifSettings" class="btn btn-default btn-fill"  data-toggle="modal" data-target="#notifModal"><center>Notification Settings</center></button>' +
 	        		'</ul>' +
 				        '<li class="dropdown">' +
 		          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Super Admin Name <span class="caret"></span></a> ' +
