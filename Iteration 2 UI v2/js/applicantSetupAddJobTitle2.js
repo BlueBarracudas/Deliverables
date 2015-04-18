@@ -64,28 +64,28 @@ $( "#certadd" ).click(function(){
     $newOther.append($('<br>'));
     $newdiv.append($newOther);
 
-    //Create new Date Achieved field
-    var $newdateachievedlabel = $('<label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>');
-    //Append the label
-    $newdiv.append($newdateachievedlabel);
-    var $newdateachievedinput = $('<div class="col-md-7 dateachieved-input"></div>');
-    $newdateachievedinput.append($('<input class="form-control input-sm classhschool" type="text" name="hschool">'));
-    //Append the input
-    $newdiv.append($newdateachievedinput);
+    // //Create new Date Achieved field
+    // var $newdateachievedlabel = $('<label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>');
+    // //Append the label
+    // $newdiv.append($newdateachievedlabel);
+    // var $newdateachievedinput = $('<div class="col-md-7 dateachieved-input"></div>');
+    // $newdateachievedinput.append($('<input class="form-control input-sm classhschool" type="text" name="hschool">'));
+    // //Append the input
+    // $newdiv.append($newdateachievedinput);
     
     //Insert new br
-    $newdiv.append($('<br>'));
+    // $newdiv.append($('<br>'));
     
     //Create new Certificate of Competency field
-    var $newcertcompetency = $('<div class="checkbox"><label>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
-    var $yes = $('<input class="competency-checkbox" id="radioBtnYes' +   numOfcertRadioButton +'" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>');
-    var $no = $(' <input class="competency-checkbox" id="radioBtnNo'  +   numOfcertRadioButton +'" name="radioBtn" value="no" type="radio"/><span>No |</span>');
+    var $newcertcompetency = $('<div class="checkbox"><label>' + '<input class="competency-checkbox" id="radioBtnYes' +   numOfcertRadioButton +'" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>' + '<input class="competency-checkbox" id="radioBtnNo'  +   numOfcertRadioButton +'" name="radioBtn" value="no" type="radio"/><span>No |</span>' +'Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
+    // var $yes = $('<input class="competency-checkbox" id="radioBtnYes' +   numOfcertRadioButton +'" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>');
+    // var $no = $(' <input class="competency-checkbox" id="radioBtnNo'  +   numOfcertRadioButton +'" name="radioBtn" value="no" type="radio"/><span>No |</span>');
     // var $label = $('Certificate of Competency');
 // <input class="competency-checkbox" id="radioBtnYes1" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>
 //               <input class="competency-checkbox" id="radioBtnNo1" name="radioBtn" value="no" type="radio"/><span>No |</span>
     
-     $newcertcompetency.prepend($no);
-      $newcertcompetency.prepend($yes);
+    //  $newcertcompetency.prepend($no);
+    // $newcertcompetency.prepend($yes);
 
     //Append the new certificate of competency field
     $newdiv.append($newcertcompetency);
