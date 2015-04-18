@@ -5,12 +5,13 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 		   ' </div>'+
 		    '<div>'+
 		     ' <ul class="nav nav-tabs navbar-nav">'+
-		      '  <li id="home"><a href="companyHomePage.html">Home</a></li>'+
+		      '  <li id="home" class="active"><a href="companyHomePage.html">Home</a></li>'+
 		       ' <li id="profile"><a href="companyViewProfile.html">Company Profile</a></li>'+
-		        '<li id="appointments"><a href="companyViewListofAppointments.html" data-toggle="tab">Appointments</a></li> '+
+		       ' <li id="search" ><a href="companySearch.html">Search Applicants</a></li>'+
+		        '<li id="appointments"><a href="companyViewListofAppointments.html">Appointments</a></li> '+
                 '<li class="dropdown" id="JobListings"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Job Listings</a>'+
                  		         ' 	<ul class="dropdown-menu" id="JobListing-dropdown" role="menu">'+
-                                     '<li><a href="companyViewJobListings.html"> View Job Listing</a></li>'+
+                                     '<li><a href="companyViewJobListings.html"> View Job Listings</a></li>'+
                                      '<li><a href="companyCreateJobListing.html"> Create Job Listing</a></li>'+
                                     '</ul>'+    
                                     '</li> '+

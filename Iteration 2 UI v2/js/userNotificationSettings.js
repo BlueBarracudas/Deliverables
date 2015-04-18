@@ -23,7 +23,7 @@ var $notificationSettingsForm =    ' <div id="notifModal" class="modal fade">'+
             '</div>'+
             '<div class="modal-footer">'+
               '<div class="text-center" id="buttonGroup">' +
-                '<button type="button" class="btn btn-default">Cancel</button>' +
+                '<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>' +
                 '<button type="submit" class="btn btn-success">Update</button>' +
               '</div>' +
             '</div>'
