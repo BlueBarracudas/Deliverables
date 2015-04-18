@@ -5,11 +5,18 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 		   ' </div>'+
 		    '<div>'+
 		     ' <ul class="nav nav-tabs navbar-nav">'+
-		      '  <li id="home"><a href="#">Home</a></li>'+
-		       ' <li id="profile"><a href="#companyProfile" data-toggle="tab">Company Profile</a></li>'+
-		        '<li id="appointments"><a href="#CompanyViewListofAppointments" data-toggle="tab">Appointments</a></li> '+
-                '<li id="JobListings"><a href="#CompanyViewListings" data-toggle="tab">Job Listings</a></li> '+
-		      '</ul>'+
+		      '  <li id="home"><a href="companyHomePage.html">Home</a></li>'+
+		       ' <li id="profile"><a href="companyViewProfile.html">Company Profile</a></li>'+
+		        '<li id="appointments"><a href="companyViewListofAppointments.html" data-toggle="tab">Appointments</a></li> '+
+                '<li class="dropdown" id="JobListings"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Job Listings</a>'+
+                 		         ' 	<ul class="dropdown-menu" id="JobListing-dropdown" role="menu">'+
+                                     '<li><a href="companyViewJobListings.html"> View Job Listing</a></li>'+
+                                     '<li><a href="companyCreateJobListing.html"> Create Job Listing</a></li>'+
+                                    '</ul>'+    
+                                    '</li> '+
+		     	'<li id="interviewedApplicants"><a href="companyViewInterviewedApplicants.html">Interviewed Applicants</a></li> '+
+    
+            '</ul>'+
 		      '<ul class="nav navbar-nav navbar-right">'+
 		      	'<li class="dropdown">'+
 	          	'	<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-bell"></span> <span class="badge">10</span> </a>'+
@@ -27,16 +34,20 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 				'<button id="notifSettings" class="btn btn-default btn-fill"  data-toggle="modal" data-target="#notifModal"><center>Notification Settings</center></button>' +
 	        		'</ul>'+
 			        '<li class="dropdown">'+
-	          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Company Name  <span class="caret"></span></a>'+
+	          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">'+
+    '               Company Name  <span class="caret"></span></a>'+
 		          	'<ul class="dropdown-menu" role="menu">'+
-		            '<li id="settings"><a href="#">Account Settings</a></li>'+
-		            '<li><a href="#">Sign Out</a></li>'+
+		            '<li id="settings"><a href="companyEditProfile.html">Edit Account Info</a></li>'+
+		             '<li><a href="userChangePassword.html">Change Password</a></li>'+
+                    '<li><a href="#">Sign Out</a></li>'+
 	        		'</ul>'+
 	          	'</ul>'+
 		    '</div>'+
 		    
 	  '	</div>'+
-	'</nav>';
+	'</nav>' +
+	 '<link rel="stylesheet" href="css/userNotificationSettings.css">' +
+	'<script src="js/userNotificationSettings.js"></script>';
 	// <div class="tab-content">
 	// 	<div class= "content tab-pane" id="companyregister">
 	// 		<object type="text/html" data="adminRegisterCompany.html" ></object>
@@ -49,11 +60,4 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 		       
 
 document.write(navBar);
-
-$(document).ready(function () {
-    $(".nav .navigation").on("click", function(){
-        $(".nav").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
-    });
-	});
 

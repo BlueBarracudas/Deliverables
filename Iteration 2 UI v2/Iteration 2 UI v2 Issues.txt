@@ -3,7 +3,7 @@ Iteration 2 UI v2 Issues
 applicantEditProfile.html - fixed
 applicantSearch.html - fixed
 applicantViewListOfAppointments.html - fixed
-companyCreateJobListing.html - pending; add cert
+companyCreateJobListing.html - fixed
 companySearch.html - fixed
 companyViewInterviewedApplicants.html - checked, nothing to change
 companyViewJobListing.html - fixed
@@ -19,6 +19,7 @@ lists - delete, cancel, reject must remove div element
 
 
 fix nav bars - pending
+
 
 
 NOTES (not issues):

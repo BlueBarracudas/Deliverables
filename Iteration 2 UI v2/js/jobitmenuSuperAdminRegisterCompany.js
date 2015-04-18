@@ -5,9 +5,9 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 		   ' </div>'+
 		    '<div>'+
 		     ' <ul class="nav nav-tabs navbar-nav">'+
-		     	'<li id="home" class="active"><a href="superAdminHomePage.html" class="navigation">Home</a></li>'+
-				'<li id="RegisterCompany"><a href="adminRegisterCompany.html">Register Company</a></li>'+
-    			'<li id="RegisterAdmin"><a href="superAdminRegisterAdmin.html">Register Admin</a></li>'+
+		     	'<li id="home" ><a href="superAdminHomePage.html" class="navigation">Home</a></li>'+
+				'<li id="RegisterCompany"  class="active"><a href="adminRegisterCompany.html">Register Company</a></li>'+
+    			'<li id="RegisterAdmin" ><a href="superAdminRegisterAdmin.html">Register Admin</a></li>'+
     			'<li id="ListOfAdmins"><a href="superAdminViewListOfAdmins.html">JobIT Admins</a></li>'+
             '</ul>'+
 		      '<ul class="nav navbar-nav navbar-right">'+
@@ -28,7 +28,7 @@ var    navBar = '<nav class="navbar navbar-fixed-top navbar-custom">'+
 	        		'</ul>'+
 			        '<li class="dropdown">'+
 	          		'<a id="dropdownComponent" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">'+
-    '               Super Admin Name  <span class="caret"></span></a>'+
+    '                Super Admin Name  <span class="caret"></span></a>'+
 		          	'<ul class="dropdown-menu" role="menu">'+
 		            '<li id="settings"><a href="companyEditProfile.html">Edit Account Info</a></li>'+
 		             '<li><a href="userChangePassword.html">Change Password</a></li>'+
