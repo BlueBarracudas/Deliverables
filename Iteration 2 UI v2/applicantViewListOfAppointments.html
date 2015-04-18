@@ -19,8 +19,8 @@
 <link rel="stylesheet" href="css/button.css">
 <link rel="stylesheet" href="css/panels.css">
 <link rel="stylesheet" href="css/errormessage.css">
+<link rel="stylesheet" href="css/emptymessage.css">    
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jobitmenu.css">
 <!-- common css end  -->
 
 
@@ -39,7 +39,9 @@
 </head>
 <body>
 
-<script src="js/jobitmenuApplicantAppointments.js"></script>
+    <link rel="stylesheet" href="css/jobitmenu.css">
+    <script src="js/jobitmenuApplicant.js"></script>
+    <script src="js/applicantAppointmentsActive.js"></script>
 
 
 <div class="container mainContainer">
@@ -76,7 +78,7 @@
                         </div>
                         <div class="col-md-6 resultButtonCol button-row">
                             <div class="col-md-6">
-                                <input type="button" class="btn btn-default btn-fill " id="cancel1" name="cancel1" value="Cancel"/>
+                                <input type="button" class="btn btn-default btn-fill " id="cancel1" name="cancel1" value="Cancel" onclick="deleteDiv(this)"/>
                             </div>
                             <div class="col-md-6">
                                 <input type="button" class="btn btn-success btn-fill " id="viewAppointment1" name="viewAppointment1" value="View Appointment"data-toggle="modal" data-target="#details-popup"/>
@@ -109,7 +111,7 @@
                         </div>
                         <div class="col-md-6 resultButtonCol button-row">
                             <div class="col-md-6">
-                                <input type="button" class="btn btn-default btn-fill " id="reject2" name="reject2" value="Reject"/>
+                                <input type="button" class="btn btn-default btn-fill " id="reject2" name="reject2" value="Reject" onclick="deleteDiv(this)"/>
                             </div>
                             <div class="col-md-6">
                                 <input type="button" class="btn btn-success btn-fill " id="viewAppointment2" name="viewAppointment2" value="View Appointment" data-toggle="modal" data-target="#details-popup"/>

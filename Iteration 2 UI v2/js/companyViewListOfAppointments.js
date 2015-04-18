@@ -1,10 +1,4 @@
-var numOfAppointments = getNumOfAppointments();
-
-function acceptOnClick(el) {
-    var index = $(el).attr('id').replace( /^\D+/g, '');
-    $('#reject' + index).replaceWith($('<input type="button" class="btn btn-default btn-fill " id="cancel' + index + '" name="cancel"' + index +'"  value="Cancel" onclick="deleteDiv(this)"/>'));
-    $(el).replaceWith($('<input type="button" class="btn btn-default btn-fill" id="reschedule' + index + '" name="reschedule' + index + '" value="Reschedule"  data-toggle="modal" data-target="#reschedule-popup"/>'));
-}
+var numOfAppointments= getNumOfAppointments();
 
 function deleteDiv(el) {
     var index = $(el).attr('id').replace( /^\D+/g, '');
@@ -13,7 +7,6 @@ function deleteDiv(el) {
 }
 
 function getNumOfAppointments() {
-    console.log(($('#listContainer').find('.panel').length));
     return $('#listContainer').find('panel').length;
 }
 

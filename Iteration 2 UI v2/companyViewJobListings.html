@@ -19,8 +19,8 @@
 <link rel="stylesheet" href="css/button.css">
 <link rel="stylesheet" href="css/panels.css">
 <link rel="stylesheet" href="css/errormessage.css">
+<link rel="stylesheet" href="css/emptymessage.css">    
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jobitmenu.css">
 <!-- common css end  -->
 
 
@@ -38,7 +38,9 @@
 </head>
 <body>
 
-<script src="js/jobitmenuCompanyJobListings.js"></script>
+<link rel="stylesheet" href="css/jobitmenu.css">
+    <script src="js/jobitmenuCompany.js"></script>
+    <script src="js/companyJobListingActive.js"></script>
 
 
 <div class="container mainContainer">
@@ -80,7 +82,7 @@
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol button-row">
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="delete1" name="delete1" value="Delete"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="delete1" name="delete1" onclick="deleteDiv(this)" value="Delete"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill " id="edit1" name="edit1" value="Edit"  data-toggle="modal" data-target="#edit-popup"/>
@@ -117,7 +119,7 @@
 		            	</div>
 		            	<div class="col-md-6 resultButtonCol button-row">
 		            		<div class="col-md-6">
-		            			<input type="button" class="btn btn-default btn-fill " id="delete2" name="delete2" value="Delete"/>
+		            			<input type="button" class="btn btn-default btn-fill " id="delete2" name="delete2" onclick="deleteDiv(this)" value="Delete"/>
 		            		</div>
 		            		<div class="col-md-6">
 		            			<input type="button" class="btn btn-success btn-fill " id="edit2" name="edit2" value="Edit" data-toggle="modal" data-target="#edit-popup"/>
@@ -192,6 +194,7 @@
 
 <!-- js start -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/companyViewJobListings.js"></script>    
 <!-- js end -->
 
 </html>
