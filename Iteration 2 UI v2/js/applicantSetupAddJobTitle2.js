@@ -1,6 +1,7 @@
 var numOfSkills = 1;
 var numOfJobTitles = 1;
-var numOfCertifications = 1;    
+var numOfCertifications = 1;  
+var numOfcertRadioButton = 1;  
 
 
 $( "#skilladd" ).click(function(){
@@ -42,6 +43,7 @@ $( "#certadd" ).click(function(){
     $newdiv.append($('<br>'));
     $newdiv.append($('<br>'));
     numOfCertifications++;
+    numOfcertRadioButton++;
     //Create new select
     //Append the numOfCertifications to corresponding ids
     var $newselect = $('<select class="form-control input-sm classcert" type="text" onchange="otherCert(this)" name="certification[]" id="certification[]' + numOfCertifications + '"></select');
@@ -75,7 +77,16 @@ $( "#certadd" ).click(function(){
     $newdiv.append($('<br>'));
     
     //Create new Certificate of Competency field
-    var $newcertcompetency = $('<div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
+    var $newcertcompetency = $('<div class="checkbox"><label>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
+    var $yes = $('<input class="competency-checkbox" id="radioBtnYes' +   numOfcertRadioButton +'" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>');
+    var $no = $(' <input class="competency-checkbox" id="radioBtnNo'  +   numOfcertRadioButton +'" name="radioBtn" value="no" type="radio"/><span>No |</span>');
+    // var $label = $('Certificate of Competency');
+// <input class="competency-checkbox" id="radioBtnYes1" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>
+//               <input class="competency-checkbox" id="radioBtnNo1" name="radioBtn" value="no" type="radio"/><span>No |</span>
+    
+     $newcertcompetency.prepend($no);
+      $newcertcompetency.prepend($yes);
+
     //Append the new certificate of competency field
     $newdiv.append($newcertcompetency);
     
@@ -167,9 +178,9 @@ $( "#workadd" ).click(function(){
     var $newyearlabel = $('<div class="col-md-2"><label>Years of Experience:</label> </div>');
     //append the numOfJobTitles to the correspoding ids
     var $newyearlist = $('<div class="col-md-2" id="yearslist' + numOfJobTitles + '"></div>');
-    $newyearlist.append($('<input class="form-control input-sm" type="number" name="workExp[]">'));
+    $newyearlist.append($('<input  min="0" class="form-control input-sm" type="number" name="workExp[]">'));
     var $newyearerrormsg = $('<div class="error_container" id="yearsOfExperience_errorMessageContainer' + numOfJobTitles + '"></div>');
-    $newyearerrormsg.append($('<label class="error_message" id="yearsOfExperience_errorMessage' + numOfJobTitles + '" name="yearsOfExperience' + numOfJobTitles + '"><?php echo $weErr; ?></label>'));
+    $newyearerrormsg.append($('<label class="error_message"  id="yearsOfExperience_errorMessage' + numOfJobTitles + '" name="yearsOfExperience' + numOfJobTitles + '"><?php echo $weErr; ?></label>'));
     $newyearlist.append($newyearerrormsg);
     
     // //Company

@@ -127,7 +127,7 @@
       <div class="row">
             <div class="col-md-3"><label>Work Hours/Day:<span style="color:red">*</span></label></div>
             <div class="col-md-3" id="workhours">
-              <input class="form-control input-sm" type="number" name="hours">
+              <input class="form-control input-sm" type="number" min="0" name="hours">
             </div>
           </div>
           <br>
@@ -181,7 +181,7 @@
   </div>
   <div class="col-md-2"><label>Years of Experience:</label> </div>
   <div class="col-md-2" id="yearslist">
-  <input class="form-control input-sm" type="number" name="workExp[]">
+  <input class="form-control input-sm"  min="0" type="number" name="workExp[]">
    
    
    
@@ -225,7 +225,8 @@
             </div>
             
            <br>  -->
-            <div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="Check if you require the applicant to have passed Experts Academy\'s Skill Assesment Test for this Certification"></span></div>
+            <div class="checkbox"><label><input class="competency-checkbox" id="radioBtnYes1" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>
+              <input class="competency-checkbox" id="radioBtnNo1" name="radioBtn" value="no" type="radio"/><span>No |</span>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="Check if you require the applicant to have passed Experts Academy\'s Skill Assesment Test for this Certification"></span></div>
          
 
 

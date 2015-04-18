@@ -1,6 +1,7 @@
 var numOfSkills = 1;
 var numOfJobTitles = 1;
-var numOfCertifications = 1;    
+var numOfCertifications = 1; 
+// var numOfCertRadioButton = 1;   
 
 
 $( "#skilladd" ).click(function(){
@@ -42,6 +43,7 @@ $( "#certadd" ).click(function(){
     $newdiv.append($('<br>'));
     $newdiv.append($('<br>'));
     numOfCertifications++;
+    numOfCertRadioButton++;
     //Create new select
     //Append the numOfCertifications to corresponding ids
     var $newselect = $('<select class="form-control input-sm classcert" type="text" onchange="otherCert(this)" name="certification[]" id="certification[]' + numOfCertifications + '"></select');
@@ -76,6 +78,11 @@ $( "#certadd" ).click(function(){
     
     //Create new Certificate of Competency field
     var $newcertcompetency = $('<div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
+
+    // <input class="competency-checkbox" id="radioBtnYes1" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>
+    // <input class="competency-checkbox" id="radioBtnNo1" name="radioBtn" value="no" type="radio"/><span>No |</span>
+
+
     //Append the new certificate of competency field
     $newdiv.append($newcertcompetency);
     
