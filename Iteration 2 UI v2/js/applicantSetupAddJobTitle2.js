@@ -100,6 +100,7 @@ $( "#certadd" ).click(function(){
     var $newremovebtn = $('<button type="button" class="btn btn-link">Remove Certification</button>');
     $newremovebtn.click(function() {
         numOfCertifications--;
+        numOfcertRadioButton--;
         //Sorry for the brute force ^^'
         $(this).prev().remove();
         $(this).prev().remove();
