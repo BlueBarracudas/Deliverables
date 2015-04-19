@@ -68,7 +68,6 @@
 
     <form class="form-horizontal" id="registrationForm" role="form" method="POST" action="">
       
-    
 
           
           
@@ -77,40 +76,59 @@
    
     
   <div class="form-group">   
+           <div class="row">                   			  			<div class="col-md-3 ">
+               <div class="col-sm-offset-3">
+                   <img class="profileImg" src="#">
+          
+               </div>	
+           
+                  <div id="buttons">     
+
+ &nbsp;&nbsp;
+<span class="btn btn-default btn-file col-sm-offset-2">
+        Upload New Photo&nbsp;<input type="file" id="uploadResume" name="Upload New Resume"> </span>
+
+          </div>
+               
+               </div>
         
- <label class="col-sm-1" for="fname">First Name:<span style="color:red">*</span></label>
+<div class="col-md-8">
+    <div class="row"> &nbsp</div>
+    <div class="row">
+ <label class="col-sm-3" for="fname">First Name:<span style="color:red">*</span></label>
       
-      <div class="col-md-3">         
+      <div class="col-md-5">         
                 <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $first_name;?>">
      <div class="error_container" id="firstName_errorMessageContainer"><label class="error_message" id="firstName_errorMessage" name="firstName_errorMessage"><?php echo $fnErr; ?></label></div>
             </div>
-      
-     
-               <label class="col-sm-1" for="mname">Middle Name:</label>      
-                   <div class="col-md-3">
+    </div>
+     <div class="row">
+               <label class="col-sm-3" for="mname">Middle Name:</label>      
+                   <div class="col-md-5">
                 <input type="text" class="form-control" id="mname" name="mname" placeholder="Full middle name" value="<?php echo $middle_name;?>">
                        
                        <div class="error_container" id="middleName_errorMessageContainer"><label class="error_message" id="middleName_errorMessage" name="middleName_errorMessage"><?php echo $mnErr; ?></label></div>
             </div>
       
-      
+    </div>
+    <div class="row">
        
-            <label class="col-sm-1" for="lname">Last Name:<span style="color:red">*</span></label>
-        <div class="col-md-3">
+            <label class="col-sm-3" for="lname">Last Name:<span style="color:red">*</span></label>
+        <div class="col-md-5">
         
                 <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $last_name;?>">
             
             
             <div class="error_container" id="lastName_errorMessageContainer"><label class="error_message" id="lastName_errorMessage" name="lastName_errorMessage"><?php echo $lnErr; ?> </label></div>
             </div>
-        
+    </div>
         
         </div>
         
+      </div>
         
-        
-        
-
+        </div>
+<br>
         
         <div class="form-group">
             <label class="control-label col-md-2" for="bdayForm">Birthdate:</label>
@@ -207,11 +225,11 @@
 
         <div class="form-group">
             <label class="control-label col-md-2" for="email">Email:<span style="color:red">*</span></label>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <input type="email" placeholder="ex. username@domain.com" class="form-control" id="email" name="emailAdd" value="<?php echo $email;?>"> <div class="error_container" id="emailAdress_errorMessageContainer"><label class="error_message" id="emailAdress_errorMessage" name="emailAdress_errorMessage"><?php echo $emErr; ?> </label></div>
             </div>
       
-                  <label class="control-label col-md-2" for="mstatus">Marital Status:<span style="color:red">*</span></label>
+                  <label class="control-label col-md-3" for="mstatus">Marital Status:<span style="color:red">*</span></label>
             <div class="col-md-3">
                 <select class="form-control" id="mstatus" name="Marital-Status">
                     <option value="single">Single</option>
@@ -275,8 +293,8 @@
 
 
   <div class="row">
-   <div class="col-md-3"><label>High School:</label><span style="color:red">*</span></div>
-   <div class="col-md-9">
+   <div class="col-md-3 col-md-offset-1"><label>High School:</label><span style="color:red">*</span></div>
+   <div class="col-md-7">
             <div id="hschoollist">
                 <input class="form-control input-sm classhschool" type="text" name="hschool">
                 
@@ -291,8 +309,8 @@
  <br>
 
   <div class="row">
-  <div class="col-sm-3"><label>College:<span style="color:red">*</span> </label></div>
-    <div class="col-sm-9">
+  <div class="col-sm-3 col-md-offset-1"><label>College:<span style="color:red">*</span> </label></div>
+    <div class="col-sm-7">
         <div id="collegelist">
               <select id="collegeInput" onchange="otherCollege(this)" name="collegeInput" class="form-control" >
                             <option value="" disabled selected>--- Select ---</option>
@@ -321,8 +339,8 @@
 <br>
 
  <div class="row">
-     <div class="col-sm-3"><label>College Course:</label> </div>
-     <div class="col-sm-9">
+     <div class="col-sm-3 col-md-offset-1"><label>College Course:</label> </div>
+     <div class="col-sm-7">
          <div id="courselist">
 
           <select id="collegeCourseInput" onchange="otherCourse(this)" name="collegeCourseInput" class="form-control" >
@@ -353,8 +371,8 @@
  <br>
  <br>
   <div class="row">
-      <div class="col-sm-3"><label>Skill(s):</label><span style="color:red">*</span></div>
-     <div class="col-sm-6">
+      <div class="col-sm-3 col-md-offset-1"><label>Skill(s):</label><span style="color:red">*</span></div>
+     <div class="col-sm-7">
         <div id="skilllist">
             <input class="form-control input-sm" type="text" name="skills[]">
             
@@ -374,7 +392,7 @@
   <div class="row">
    
    <div class="row">
-  <div class="control-label col-md-2"><label>Job Title:</label> </div>
+  <div class="control-label col-md-2 col-md-offset-1"><label>Job Title:</label> </div>
   <div class="col-md-5" id="titlelist">
   <input class="form-control input-sm" type="text" name="jobtitle[]">  
    
@@ -384,7 +402,7 @@
    
   </div>
   <div class="col-md-2"><label>Years of Experience:</label> </div>
-  <div class="col-md-3" id="yearslist">
+  <div class="col-md-2" id="yearslist">
   <input class="form-control input-sm" type="number" name="workExp[]">
    
    
@@ -396,7 +414,7 @@
   </div>
 
 <div class="row">
-  <label class="control-label col-md-2">Company:</label>
+  <label class="control-label col-md-2 col-md-offset-1">Company:</label>
   <div class="col-md-5" id="companyList">
   <input class="form-control input-sm" type="text" name="company[]">  
    
@@ -422,7 +440,7 @@
   <br> 
 
     <div class="row">
-  <div class="col-sm-3"><label>Certification(s):</label> </div> <div class="col-md-7">
+  <div class="col-sm-3 col-md-offset-1"><label>Certification(s):</label> </div> <div class="col-md-6">
         <div id="certlist">
 
              <select class="form-control input-sm classcert" onchange="otherCert(this)" type="text" name="certification[]" id="certification[]">
@@ -440,13 +458,13 @@
                               <br>
                             </div>
 
-           <label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>    
-           <div class="col-md-7 dateachieved-input">
-                <input class="form-control input-sm classhschool" type="text" name="hschool">
+<label class="col-md-6 dateachieved-label control-label">Date Achieved:</label>    
+           <div class="col-md-6 dateachieved-input">
+                <input class="form-control input-sm classhschool" type="text" name="dateAchieved">
             </div>
             
            <br> 
-            <div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="Check if you have passed Experts Academy\'s Skill Assesment Test for this Certification"></span></div>
+            <div class="checkbox"><label class="col-md-offset-1"><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="Check if you have passed Experts Academy\'s Skill Assesment Test for this Certification"></span></div>
          
 
 
@@ -470,11 +488,11 @@
   
 
         <h4>Resume</h4>
-    <span class="btn btn-default btn-file">
+    <span class="btn btn-default btn-file col-md-offset-1">
         Upload Resume<input type="file" id="uploadResume" name="Upload New Resume"> </span>
 
     
-    <br><br><br>
+    <br><br><br><br>
 
     
     

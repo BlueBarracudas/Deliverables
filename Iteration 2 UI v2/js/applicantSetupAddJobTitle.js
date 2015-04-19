@@ -1,7 +1,7 @@
 var numOfSkills = 1;
 var numOfJobTitles = 1;
 var numOfCertifications = 1; 
-// var numOfCertRadioButton = 1;   
+var numOfCertRadioButton = 1;   
 
 
 $( "#skilladd" ).click(function(){
@@ -65,10 +65,10 @@ $( "#certadd" ).click(function(){
     $newdiv.append($newOther);
 
     //Create new Date Achieved field
-    var $newdateachievedlabel = $('<label class="col-md-5 dateachieved-label control-label">Date Achieved:</label>');
+    var $newdateachievedlabel = $('<label class="col-md-6 dateachieved-label control-label">Date Achieved:</label>');
     //Append the label
     $newdiv.append($newdateachievedlabel);
-    var $newdateachievedinput = $('<div class="col-md-7 dateachieved-input"></div>');
+    var $newdateachievedinput = $('<div class="col-md-6 dateachieved-input"></div>');
     $newdateachievedinput.append($('<input class="form-control input-sm classhschool" type="text" name="hschool">'));
     //Append the input
     $newdiv.append($newdateachievedinput);
@@ -77,7 +77,7 @@ $( "#certadd" ).click(function(){
     $newdiv.append($('<br>'));
     
     //Create new Certificate of Competency field
-    var $newcertcompetency = $('<div class="checkbox"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
+    var $newcertcompetency = $('<div class="checkbox col-md-offset-1"><label><input class="competency-checkbox" type="checkbox"/>Certificate of Competency</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="<insert desc. here>"></span></div>');
 
     // <input class="competency-checkbox" id="radioBtnYes1" name="radioBtn" value="yes" type="radio"/><span>Yes |</span>
     // <input class="competency-checkbox" id="radioBtnNo1" name="radioBtn" value="no" type="radio"/><span>No |</span>
@@ -162,7 +162,7 @@ $( "#workadd" ).click(function(){
     var $secondrow = $('<div class="row"></div>'); //Should contain the Company
     
     //Job Title
-    var $newjobtitlelabel = $(' <div class="control-label col-md-2"><label>Job Title:</label> </div>');
+    var $newjobtitlelabel = $(' <div class="control-label col-md-2 col-md-offset-1"><label>Job Title:</label> </div>');
     //append the numOfJobTitles to the correspoding ids
     var $newjobtitlelist = $('<div class="col-md-5" id="titlelist' + numOfJobTitles + '"></div>'); 
     $newjobtitlelist.append($('<input class="form-control input-sm" type="text" name="jobtitle[]">'));
@@ -173,14 +173,14 @@ $( "#workadd" ).click(function(){
     //Years of Experience
     var $newyearlabel = $('<div class="col-md-2"><label>Years of Experience:</label> </div>');
     //append the numOfJobTitles to the correspoding ids
-    var $newyearlist = $('<div class="col-md-3" id="yearslist' + numOfJobTitles + '"></div>');
+    var $newyearlist = $('<div class="col-md-2" id="yearslist' + numOfJobTitles + '"></div>');
     $newyearlist.append($('<input class="form-control input-sm" type="number" name="workExp[]">'));
     var $newyearerrormsg = $('<div class="error_container" id="yearsOfExperience_errorMessageContainer' + numOfJobTitles + '"></div>');
     $newyearerrormsg.append($('<label class="error_message" id="yearsOfExperience_errorMessage' + numOfJobTitles + '" name="yearsOfExperience' + numOfJobTitles + '"><?php echo $weErr; ?></label>'));
     $newyearlist.append($newyearerrormsg);
     
     //Company
-    var $newcompanylabel = $(' <div class="control-label col-md-2"><label>Company:</label> </div>');
+    var $newcompanylabel = $(' <div class="control-label col-md-2 col-md-offset-1"><label>Company:</label> </div>');
     //append the numOfJobTitles to the correspoding ids
     var $newcompanylist = $('<div class="col-md-5" id="companyList' + numOfJobTitles + '"></div>');
     $newcompanylist.append($('<input class="form-control input-sm" type="text" name="company[]">'));
@@ -202,7 +202,7 @@ $( "#workadd" ).click(function(){
     
     //Create new remove button that will remove the div before it
     var $newremovediv = $('<div class="row"></div>');
-    var $newremovebtn = $('<button class="btn btn-link col-sm-offset-2">Remove Job Title</button>');
+    var $newremovebtn = $('<button class="btn btn-link col-md-offset-3">Remove Job Title</button>');
     $newremovebtn.click(function(){
         numOfJobTitles--;
         $(this).parent().prev().remove();
