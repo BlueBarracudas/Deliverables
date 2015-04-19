@@ -88,7 +88,12 @@
 <span class="btn btn-default btn-file col-sm-offset-2">
         Upload New Photo&nbsp;<input type="file" id="uploadResume" name="Upload New Resume"> </span>
 
+                       <label class="error_message col-md-7 col-md-offset-2" id="picture_errorMessage" name="picture_errorMessage">ERROR HERE</label>
+
           </div>
+               
+   
+               
                
                </div>
         
@@ -99,7 +104,7 @@
       
       <div class="col-md-5">         
                 <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $first_name;?>">
-     <div class="error_container" id="firstName_errorMessageContainer"><label class="error_message" id="firstName_errorMessage" name="firstName_errorMessage"><?php echo $fnErr; ?></label></div>
+     <div class="error_container" id="firstName_errorMessageContainer"><label class="error_message" id="firstName_errorMessage" name="firstName_errorMessage"> ERROR<?php echo $fnErr; ?></label></div>
             </div>
     </div>
      <div class="row">
@@ -107,7 +112,7 @@
                    <div class="col-md-5">
                 <input type="text" class="form-control" id="mname" name="mname" placeholder="Full middle name" value="<?php echo $middle_name;?>">
                        
-                       <div class="error_container" id="middleName_errorMessageContainer"><label class="error_message" id="middleName_errorMessage" name="middleName_errorMessage"><?php echo $mnErr; ?></label></div>
+                       <div class="error_container" id="middleName_errorMessageContainer"><label class="error_message" id="middleName_errorMessage" name="middleName_errorMessage">ERROR<?php echo $mnErr; ?></label></div>
             </div>
       
     </div>
@@ -163,7 +168,7 @@
             <div class="col-md-3">
                 <input type="text" class="form-control" id="cellnum" placeholder="ex. +639847226451" name="cpnum" value="<?php echo $contact_no;?>">
                 
-                <div class="error_container" id="cellNumber_errorMessageContainer"><label class="error_message" id="cellNumber_errorMessage" name="cellNumber_errorMessage"><?php echo $cnErr; ?> </label></div>
+                <div class="error_container" id="cellNumber_errorMessageContainer"><label class="error_message" id="cellNumber_errorMessage" name="cellNumber_errorMessage">ERROR<?php echo $cnErr; ?> </label></div>
                 
             </div>
     
@@ -187,7 +192,7 @@
             <div class="col-md-3">
                <input type ="text" class="form-control" id="cityInput" name="cityInput"/> <?php echo $address;?>
                 
-                <div class="error_container" id="city_errorMessageContainer"><label class="error_message" id="city_errorMessage" name="city_errorMessage"><?php echo $addErr; ?></label></div>
+                <div class="error_container" id="city_errorMessageContainer"><label class="error_message" id="city_errorMessage" name="city_errorMessage">Error<?php echo $addErr; ?></label></div>
             </div>
 
   
@@ -211,7 +216,7 @@
             <div class="col-md-3">
                <textarea class="form-control" rows="3" id="address" name="address"> <?php echo $address;?></textarea>
                 
-                <div class="error_container" id="address_errorMessageContainer"><label class="error_message" id="address_errorMessage" name="address_errorMessage"><?php echo $addErr; ?></label></div>
+                <div class="error_container" id="address_errorMessageContainer"><label class="error_message" id="address_errorMessage" name="address_errorMessage">Error<?php echo $addErr; ?></label></div>
             </div>
 
        
@@ -226,7 +231,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="email">Email:<span style="color:red">*</span></label>
             <div class="col-md-3">
-                <input type="email" placeholder="ex. username@domain.com" class="form-control" id="email" name="emailAdd" value="<?php echo $email;?>"> <div class="error_container" id="emailAdress_errorMessageContainer"><label class="error_message" id="emailAdress_errorMessage" name="emailAdress_errorMessage"><?php echo $emErr; ?> </label></div>
+                <input type="email" placeholder="ex. username@domain.com" class="form-control" id="email" name="emailAdd" value="<?php echo $email;?>"> <div class="error_container" id="emailAdress_errorMessageContainer"><label class="error_message" id="emailAdress_errorMessage" name="emailAdress_errorMessage">Error<?php echo $emErr; ?> </label></div>
             </div>
       
                   <label class="control-label col-md-3" for="mstatus">Marital Status:<span style="color:red">*</span></label>
@@ -236,7 +241,7 @@
                     <option value="married">Married</option>
                 </select>
           
-            <div class="error_container" id="maritalStatus_errorMessageContainer"><label class="error_message" id="maritalStatus_errorMessage" name="maritalStatus_errorMessage"><?php echo $msErr; ?> </label></div>
+            <div class="error_container" id="maritalStatus_errorMessageContainer"><label class="error_message" id="maritalStatus_errorMessage" name="maritalStatus_errorMessage">Error<?php echo $msErr; ?> </label></div>
             
             </div>
       
@@ -251,7 +256,7 @@
             <div class="col-md-3">
                 <input type="password" class="form-control" id="pwd" name="password">
                     
-                <div class="error_container" id="password_errorMessageContainer"><label class="error_message" id="password_errorMessage" name="password_errorMessage"><?php echo $pwErr; ?></label></div>
+                <div class="error_container" id="password_errorMessageContainer"><label class="error_message" id="password_errorMessage" name="password_errorMessage">Error<?php echo $pwErr; ?></label></div>
                 
             </div>
 
@@ -265,7 +270,7 @@
                         <label><input type="radio" name="sex" value="F">Female</label>
                     </div>
                
-                <div class="error_container" id="gender_errorMessageContainer"><label class="error_message" id="gender_errorMessage" name="gender_errorMessage"><?php echo $seErr; ?> </label></div>
+                <div class="error_container" id="gender_errorMessageContainer"><label class="error_message" id="gender_errorMessage" name="gender_errorMessage">Error<?php echo $seErr; ?> </label></div>
             
             </div>
 
@@ -277,7 +282,7 @@
             <div class="col-md-3">
                 <input type="password" class="form-control" id="confirm" name="confirmPassword">
           
-            <div class="error_container" id="confirmPassword_errorMessageContainer"><label class="error_message" id="confirmPassword_errorMessage" name="confirmPassword_errorMessage"><?php echo $cpErr; ?></label></div>
+            <div class="error_container" id="confirmPassword_errorMessageContainer"><label class="error_message" id="confirmPassword_errorMessage" name="confirmPassword_errorMessage">Error<?php echo $cpErr; ?></label></div>
             </div>
         </div>
 
@@ -299,7 +304,7 @@
                 <input class="form-control input-sm classhschool" type="text" name="hschool">
                 
                 
-                                <div class="error_container" id="highSchool_errorMessageContainer"><label class="error_message" id="highschool_errorMessage" name="highchool_errorMessage"><?php echo $scErr; ?></label></div>
+                                <div class="error_container" id="highSchool_errorMessageContainer"><label class="error_message" id="highschool_errorMessage" name="highchool_errorMessage">Error<?php echo $scErr; ?></label></div>
                 
                 
                 
@@ -327,7 +332,7 @@
                               </div>
                             </div>
         
-                        <div class="error_container" id="college_errorMessageContainer"><label class="error_message" id="college_errorMessage" name="college_errorMessage"><?php echo $colErr; ?></label></div>
+                        <div class="error_container" id="college_errorMessageContainer"><label class="error_message" id="college_errorMessage" name="college_errorMessage">Error<?php echo $colErr; ?></label></div>
                 
         
         
@@ -358,7 +363,7 @@
                             </div>
              
              
-                             <div class="error_container" id="collegeCourse_errorMessageContainer"><label class="error_message" id="collegeCourse_errorMessage" name="collegeCourse_errorMessage"><?php echo $couErr; ?></label></div>
+                             <div class="error_container" id="collegeCourse_errorMessageContainer"><label class="error_message" id="collegeCourse_errorMessage" name="collegeCourse_errorMessage">Error<?php echo $couErr; ?></label></div>
                 
              
              
@@ -376,7 +381,7 @@
         <div id="skilllist">
             <input class="form-control input-sm" type="text" name="skills[]">
             
-                            <div class="error_container" id="skill_errorMessageContainer1"><label class="error_message" id="skill_errorMessage1" name="skill_errorMessage1"><?php echo $skErr; ?></label></div>
+                            <div class="error_container" id="skill_errorMessageContainer1"><label class="error_message" id="skill_errorMessage1" name="skill_errorMessage1">Error<?php echo $skErr; ?></label></div>
                 
             
             
@@ -396,7 +401,7 @@
   <div class="col-md-5" id="titlelist">
   <input class="form-control input-sm" type="text" name="jobtitle[]">  
    
-  <div class="error_container" id="jobTitle_errorMessageContainer1"><label class="error_message" id="jobTitle_errorMessage1" name="jobTitle_errorMessage1"><?php echo $jtErr; ?></label></div>
+  <div class="error_container" id="jobTitle_errorMessageContainer1"><label class="error_message" id="jobTitle_errorMessage1" name="jobTitle_errorMessage1">Error<?php echo $jtErr; ?></label></div>
    
    
    
@@ -418,7 +423,7 @@
   <div class="col-md-5" id="companyList">
   <input class="form-control input-sm" type="text" name="company[]">  
    
-  <div class="error_container" id="company_errorMessageContainer1"><label class="error_message" id="company_errorMessage1" name="company_errorMessage1"><?php echo $jtErr; ?></label></div>
+  <div class="error_container" id="company_errorMessageContainer1"><label class="error_message" id="company_errorMessage1" name="company_errorMessage1">Error<?php echo $jtErr; ?></label></div>
   </div>
    
    
@@ -468,7 +473,7 @@
          
 
 
-                            <div class="error_container" id="cert_errorMessageContainer1"><label class="error_message" id="cert_errorMessage1" name="cert_errorMessage1"><?php echo $ceErr; ?></label></div>
+                            <div class="error_container" id="cert_errorMessageContainer1"><label class="error_message" id="cert_errorMessage1" name="cert_errorMessage1">Error<?php echo $ceErr; ?></label></div>
             
         </div>
 
@@ -490,7 +495,9 @@
         <h4>Resume</h4>
     <span class="btn btn-default btn-file col-md-offset-1">
         Upload Resume<input type="file" id="uploadResume" name="Upload New Resume"> </span>
-
+  <div class="row error_container">
+            <label class="error_message col-md-6" id="resume_errorMessage" name="resume_errorMessage">ERROR</label>
+    </div>
     
     <br><br><br><br>
 
