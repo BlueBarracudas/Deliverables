@@ -6,17 +6,17 @@
 			color: black;
 		}
 		.nav li a:hover {
-		    background-color: rgba(100, 100, 100, 0.5) !important; /*Changinh values will make this not work :(*/
-			color: white;
+		    background-color: rgba(100, 100, 100, 0.5) !important; /*Changing values will make this not work :(*/
+			color: black;
 		}
         
 		.active > a {
             background-color: rgb(108,122,137) !important;
-            color: white !important;
+            color: black !important;
         }
         
 		.navbar-brand:hover{
-			color: white;
+			color: black;
 		}
 		.posfixed{
 			position: fixed;
@@ -28,7 +28,7 @@
 		}
 		.navbar-brand{
 			font-size: 26px !important;
-			color: white;
+			color: black;
 		}
 
 		#dropdownComponent:hover {
@@ -36,7 +36,7 @@
 		}
 
 		#dropdownComponent:focus{
-			    background-color: none;
+			    background-color: black;
 		}
 
 		@import url("//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-glyphicons.css");
