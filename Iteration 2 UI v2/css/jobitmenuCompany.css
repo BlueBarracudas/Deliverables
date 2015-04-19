@@ -1,4 +1,4 @@
-.navbar-custom{
+ .navbar-custom{
 			background-color: rgb(231,231,231);
 			color: black;
 		}
@@ -15,10 +15,10 @@
             color: black !important;
         }
         
-		.navbar-brand:hover{
+		 .navbar-brand:hover{
 			color: black;
 		}
-		.posfixed{
+		 .posfixed{
 			position: fixed;
 			bottom:1px;
 			right: 1px;

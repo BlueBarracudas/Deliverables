@@ -56,8 +56,15 @@
 			            		 <div class="col-md-12">
 			            		 	<div class="btn btn-default  btn-file  btn-fill" id="uploadCompanyLogoButton">
 					                      Upload Logo <input type="file">
+            
+
 					                </div>
-			            		 </div>
+			            		 
+                                                               <div class="row error_container">
+            <label class="error_message col-md-12" id="upload_errorMessage" name="upload_errorMessage">ERROR HERE</label>
+    </div>
+                                
+                                </div>
 			            	</div>
 
 			            	<div class="col-md-8">
@@ -85,14 +92,14 @@
                                     <label for="companyNameInput" class="col-sm-5 control-label">Company Name:<span style="color:red">*</span></label>
                                      <div class="col-sm-7">
                                               <input type="text" class="form-control" id="companyNameInput" placeholder="">
-                                  
-                                   
+                    
+                                                                       
+<div class = "row error_container col-sm-offset-1">                                    
+                                                              <div class="error_container" id="companyName_errorMessageContainer"><label class="error_message" id="companyName_errorMessage" name="companyName_errorMessage">Error Message</label></div>
+                                     </div> 
                                      
                                      </div>
-                                     
-<div class = "companySetupError">                                    
-                                                              <div class="error_container" id="companyName_errorMessageContainer"><label class="error_message" id="companyName_errorMessage" name="companyName_errorMessage">Error Message</label></div>
-                                     </div>    
+   
                          
                          </div>
 
@@ -104,15 +111,15 @@
                                      <div class="col-sm-7">
                                               <input type="text" class="form-control" id="companyContactNumberInput" placeholder="">
                                          
+                                                      <div class = "row companySetupError col-sm-offset-1">                        
+                                         <div class="error_container" id="contactNumber_errorMessageContainer"><label class="error_message" id="contactNumber_errorMessage" name="contactNumber_errorMessage">Error Message</label></div>
                                          
+                                   </div>
  
                                     </div>
 
                        
-                <div class = "companySetupError">                        
-                                         <div class="error_container" id="contactNumber_errorMessageContainer"><label class="error_message" id="contactNumber_errorMessage" name="contactNumber_errorMessage">Error Message</label></div>
-                                         
-                                   </div>
+   
                          
                          
                          </div>
@@ -124,25 +131,22 @@
                                     <label for="companyAddressInputInput" class=" col-sm-5 control-label">Address:<span style="color:red">*</span></label>
                                      <div class="col-sm-7">
                                          <textarea class="form-control" id="companyAddressInputInput"  rows="7" id="companyDescriptionInput"></textarea>
-            
-                                         
-                                    </div>
-
-                             <div class = "companySetupError">                              
+                         <div class = "row col-sm-offset-1">                              
                            
      <div class="error_container" id="companyAdress_errorMessageContainer"><label class="error_message" id="companyAdress_errorMessage" name="companyAdress_errorMessage">Error Message</label></div>
                                          
                              
                              
                              </div>
+                                         
+                                    </div>
+
+                
                              
                              
                               </div>
 
                                </div>
-
-
-
 
 
 

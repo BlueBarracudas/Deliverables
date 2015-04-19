@@ -73,6 +73,9 @@
             <div class="col-sm-9">
               <div id="position">
                   <input class="form-control input-sm" type="text" name="position">
+                     <div class="row error_container">
+            <label class="error_message col-md-6" id="position_errorMessage" name="postion_errorMessage">ERROR HERE</label>
+    </div>
               </div>
             </div> 
           </div>
@@ -102,7 +105,7 @@
                             </div>
              
              
-                             <div class="error_container" id="collegeCourse_errorMessageContainer"><label class="error_message" id="collegeCourse_errorMessage" name="collegeCourse_errorMessage"><?php echo $couErr; ?></label></div>
+                             <div class="error_container" id="collegeCourse_errorMessageContainer"><label class="error_message" id="collegeCourse_errorMessage" name="collegeCourse_errorMessage">ERROR HERE<?php echo $couErr; ?></label></div>
                 
              
              
@@ -118,7 +121,10 @@
             <div class="col-md-3"><label>Location:<span style="color:red">*</span></label></div>
             <div class="col-md-9" id="location">
               <input class="form-control input-sm" type="location" name="location">
-            </div>
+             <div class="row error_container">
+            <label class="error_message col-md-6" id="location_errorMessage" name="location_errorMessage">ERROR HERE</label>
+    </div>  
+          </div>
           </div>
 
           <br><br>
@@ -128,7 +134,11 @@
             <div class="col-md-3"><label>Work Hours/Day:<span style="color:red">*</span></label></div>
             <div class="col-md-3" id="workhours">
               <input class="form-control input-sm" type="number" min="0" name="hours">
-            </div>
+             <div class="row error_container">
+            <label class="error_message col-md-6" id="hours_errorMessage" name="hours_errorMessage">ERROR HERE</label>
+    </div>
+  
+          </div>
           </div>
           <br>
           <br>
@@ -159,8 +169,10 @@
                 <input type="checkbox" id="sunday"> Sunday</input>
               </div>
             </div>
-          </div>
-
+         </div>
+   <div class="row error_container">
+            <label class="error_message col-md-3" id="sched_errorMessage" name="sched_errorMessage">ERROR HERE</label>
+    </div>
 
  <br>
  <h4>Work Experience</h4>
@@ -174,7 +186,7 @@
   <div class="col-md-5" id="titlelist">
   <input class="form-control input-sm" type="text" name="jobtitle[]">  
    
-  <div class="error_container" id="jobTitle_errorMessageContainer1"><label class="error_message" id="jobTitle_errorMessage1" name="jobTitle_errorMessage1"><?php echo $jtErr; ?></label></div>
+  <div class="error_container" id="jobTitle_errorMessageContainer1"><label class="error_message" id="jobTitle_errorMessage1" name="jobTitle_errorMessage1">ERROR HERE<?php echo $jtErr; ?></label></div>
    
    
    
@@ -185,7 +197,7 @@
    
    
    
-  <div class="error_container" id="yearsOfExperience_errorMessageContainer1"><label class="error_message" id="yearsOfExperience_errorMessage1" name="yearsOfExperience1"><?php echo $weErr; ?></label></div>
+  <div class="error_container" id="yearsOfExperience_errorMessageContainer1"><label class="error_message" id="yearsOfExperience_errorMessage1" name="yearsOfExperience1">ERROR HERE<?php echo $weErr; ?></label></div>
 
    
   </div>
@@ -230,7 +242,7 @@
          
 
 
-                            <div class="error_container" id="cert_errorMessageContainer1"><label class="error_message" id="cert_errorMessage1" name="cert_errorMessage1"><?php echo $ceErr; ?></label></div>
+                            <div class="error_container" id="cert_errorMessageContainer1"><label class="error_message" id="cert_errorMessage1" name="cert_errorMessage1">ERROR HERE<?php echo $ceErr; ?></label></div>
             
         </div>
 
@@ -254,12 +266,16 @@
             <input type="file" id="theFile" />
           </div>
         </div>
-
+           <div class="row error_container">
+            <label class="error_message col-md-6" id="file_errorMessage" name="file_errorMessage">ERROR HERE</label>
+    </div>
          <br>
   
 
 <div class ="row">
-    <label class="col-sm-3">Total Slots Available:</label>      <div class="col-md-2" id="yearslist"><input class="form-control input-sm" type="number" name="totalSlots"></div>
+    <label class="col-sm-3">Total Slots Available:</label>      <div class="col-md-2" id="yearslist"><input class="form-control input-sm" type="number" name="totalSlots">    <div class="row error_container">
+            <label class="error_message col-md-7" id="slots_errorMessage" name="slots_errorMessage">ERROR HERE</label>
+    </div> </div>
    
    
 
