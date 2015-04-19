@@ -33,6 +33,7 @@
 
 		#dropdownComponent:hover {
 				 background-color: rgb(108,122,137) !important;
+				color: black;
 		}
 
 		#dropdownComponent:focus{
