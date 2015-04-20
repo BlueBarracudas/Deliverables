@@ -62,6 +62,12 @@
 		#notif:hover{
 			color: black;
 		}
+
+			.dropdown-menu>li>a:hover{
+		color:black;
+		}
+
+
 		
 		#notifSettings{
   background-image: none !important;
